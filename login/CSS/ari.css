@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(12, 12, 145);
+    color: white;
+}
+nav {
+    display: flex;
+}
+a {
+    text-decoration: none;
+    color: white;
+    padding-right: 10px;
+
+
+}
+a:hover{
+    color: black;
+}
+.banner{
+    background-image: url(../Imagens/ariete.png);
+   
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.banner .banner-text{
+    margin: 150px;
+    text-align: center;
+    padding: 0 90px;
+
+}
+.banner .banner-text h1{
+    font-size: 70px;
+    color: black;
+}
+.banner .banner-text p{
+    font-size: 20px;
+    color: black;
+    font-weight: lighter;
+    margin: 18px 0;
+}
+.baixo .conteudos{
+    color: blue;
+}
+.lista{
+    font-weight: bold;
+
+   display: flex;
+   flex-direction: row;
+  
+    padding: 30px 30px;
+    
+    margin:12px;
+    padding-right: 11px;
+    border-radius: 10px;
+    border: 10px; 
+    border-style: solid;
+
+    border-color: blue;
+   
+    margin-top: 3px;
+  font-size: 20px;
+
+  
+
+  
+}
+
+.lista p{
+   
+    text-align: center;
+    color: blue;
+    font-size: 25px;
+}
+
+
+ .listas h2{
+    color: blue;
+ }
+ .listas{
+    display: flex;
+    flex-direction: row;
+    padding: 60px 30px;
+    font-weight: bold;
+    
+ }
+.listas .primeira-lista{
+    color:  rgb(21, 3, 61);
+    padding: 30px 30px;
+}
+.listas .segunda-lista{
+    color: rgb(21, 3, 61);
+    padding: 25px;
+    padding: 30px 39px;
+}
