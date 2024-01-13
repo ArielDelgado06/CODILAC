@@ -1,4 +1,4 @@
-Site para maracação de consultas **CodiLac**
+Site para marcação de consultas **CodiLac**
 
 **Tecnologias usadas**
 1 - HTML
