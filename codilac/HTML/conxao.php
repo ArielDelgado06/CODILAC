@@ -8,3 +8,4 @@
  $conexao = mysqli_connect($servidor,$usuario,$senha,$BD_banco);
 
 //  primeiro testa a conexão se esta a funcionar e depois podes tentar mandar dados ao banco de dados
+

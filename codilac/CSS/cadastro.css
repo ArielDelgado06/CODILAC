@@ -4,16 +4,17 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 body{
-  background-image: url(../img/ariete.png);
-  background-size: cover;
-   
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding: 20px;
-   min-height: 100vh;
+    background-image: url(../img/ariete.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
 }
+
 .w50{
     width: 50%;
     float: left;
@@ -23,20 +24,20 @@ body{
     display: flex;
     width: 930px;
 }
+
 .img-box{
     background-color: white;
    width: 55%;
    display: flex;
    align-items: center;
    padding: 20px;
-  
    border-radius: 20px 0 0 20px;
 }
+
 .img-box img{
-    width: 100%;
-   
-    
+    width: 100%; 
 }
+
 .form-box{
     background-color: rgba(255, 255, 255, 0.5) ;
     backdrop-filter: blur(40px);
@@ -69,7 +70,7 @@ form .input-group input{
     width: 100%;
     height: 47px;
     background-color: white;
-    box-shadow:0px 10px 40px  rgb(4, 4, 231) ;
+    box-shadow:0px 10px 40px  hsl(216, 100%, 50%) ;
     border-radius: 20px;
     outline: none;
     border: 2px solid transparent;
@@ -79,7 +80,7 @@ form .input-group input{
     transition: all 0.4s ease;
 }
 form .input-group input:focus{
-    border-color: blue;
+    border-color: hsl(216, 100%, 50%);
 }
 form .input-group button:hover{
     background-color: white;
@@ -89,16 +90,21 @@ form .input-group button:hover{
 form .input-group button{
     width: 100%;
     height: 47px;
-    background:blue;
+    background:hsl(216, 100%, 50%);
     border-radius: 20px;
     outline: none;
     border: none;
     margin-top: 15px;
     color: white;
     cursor: pointer;
-    font-size: 18px;
-    
+    font-size: 18px;  
 }
+
+form .input-group button:hover{
+    background:hsl(216, 100%, 50%);
+    color: #fff;
+}
+
 @media (max-width:930px){
     .img-box{
         display: none;
