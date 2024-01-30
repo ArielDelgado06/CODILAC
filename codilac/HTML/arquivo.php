@@ -15,7 +15,7 @@ if(isset($_POST['submit']) && !empty($_POST['nome']) && !empty($_POST['senha']))
     }
 
     else{
-      header("Location: consulta.html");
+      header("Location: consulta.php");
     }
 }
 
