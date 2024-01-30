@@ -1,3 +1,21 @@
+<?php
+if(isset($_POST['submit'])){
+    include_once('conexao.php');
+
+    // nome dos campos que constam no nosso formulário
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+    $senha = $_POST['senha'];
+    $conf_senha = $_POST['conf_senha'];
+
+    $sql = "INSERT INTO cadastros(nome,email,telefone,senha,conf_senha)
+      Values('{$nome}','{$email}','{$telefone}','{$senha}','{$conf_senha}')";
+   
+     $inserir = mysqli_query($conexao,$sql);
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,7 +37,7 @@
         <div class="form-box">
             <h2>Cadastro</h2>
             
-            <form action="conxao.php" method="post">
+            <form action="cadastro.php" method="post">
                 <div class="input-group">
                     <label for="nome">Nome completo</label>
                     <input type="text" id="nome" name="nome" placeholder="Digite o seu nome completo" required>
@@ -48,9 +66,9 @@
                     <input type="Password" name="conf_senha" id=" confirmar senha" placeholder="confirme sua senha" required>
 
                 </div>
-                <p>Já é um membro? <a href="login.html">Login</a></p>
+                <p>Já é um membro? <a href="login.php">Login</a></p>
                 <div class="input-group">
-                    <button type="submit">Cadastrar</button>
+                    <button type="submit" name="submit" id="submit">Cadastrar</button>
                 </div>
                 
             </form>
