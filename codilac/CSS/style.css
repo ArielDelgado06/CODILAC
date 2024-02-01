@@ -295,7 +295,7 @@ body{
 
 .nav-bar{
   width: 100%;
-  height: 12vh;
+  height: 8vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -363,11 +363,6 @@ body{
 
 .botao:hover{
   transform: scale(1.1);
-}
-
-.botao a{
-  text-decoration: none;
-  color: #fff;
 }
 
 .main-article{

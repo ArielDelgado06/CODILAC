@@ -1,3 +1,17 @@
+<?php
+  // session_start();
+  
+  // if((isset($_SESSION['nome'] == false)) and (isset($_SESSION['senha'] == false)))
+  // {
+  //   unset($_SESSION['nome']);
+  //   unset($_SESSION['senha']);
+  //   header("Location: login.php");
+  // }
+
+
+  //  $logado = $_SESSION['nome'];
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
