@@ -1,0 +1,137 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root{
+  --clr-blueliht:hsl(216, 100%, 60%);
+  --clr-blue:hsl(216, 100%, 50%);
+  --clr-bluedarck:hsl(216, 100%, 40%);
+  --clr-primary-400:hsl(228,39%,23%);
+  --clr-grey:#bebebe;
+}
+
+body{
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container{
+  position: relative;
+  width: 100%;
+}
+
+.navigation{
+  position: fixed;
+  height: 100%;
+  width: 300px;
+  background: #fff;
+  border-left: 10px solid #fff;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.navigation ul{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navigation ul li{
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover{
+  background: var(--clr-blueliht);
+}
+.navigation ul li:nth-child(1){
+  margin-bottom: 40px;
+  pointer-events: none;
+}
+
+.navigation ul li:nth-child(6){
+  margin-top: 80px;
+}
+
+.navigation ul li a{
+  position: relative;
+  display: block;
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: var(--clr-blueliht);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.navigation ul li a .title{
+  color: #000;
+}
+
+.navigation ul li a #mainTitle{
+  color: var(--clr-blueliht);
+}
+
+.navigation ul li a:hover{
+  color: #fff;
+}
+
+.navigation ul li a .title:hover{
+  color: #fff;
+}
+
+.navigation ul li a .icon{
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 75px;
+  text-align: center;
+}
+
+.navigation ul li a .icon ion-icon{
+  font-size: 1.75rem;
+}
+
+.navigation ul li a .title{
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+}
+
+/* .navigation ul li:hover a::before{
+  content: '';
+  position: absolute;
+  top: -50px;
+  right:0;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--clr-blueliht);
+  pointer-events: none;
+}
+
+.navigation ul li:hover a::after{
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  right:0;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--clr-blueliht);
+  pointer-events: none;
+} */
