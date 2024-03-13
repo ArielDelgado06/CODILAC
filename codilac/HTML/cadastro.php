@@ -74,5 +74,7 @@ if(isset($_POST['submit'])){
             </form>
         </div>
     </div>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>

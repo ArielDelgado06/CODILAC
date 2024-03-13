@@ -4,6 +4,8 @@ const botao = document.querySelectorAll (".wrapper i");
 const firstCardWidth = carrossel.querySelector(".card").offsetWidth;
 const carrosselChildrens = [... carrossel.children]
 
+const t = document.querySelector('h2');
+
 let isDragging = false, timeoutId;
 
 const autoPlay = () =>{
@@ -60,3 +62,5 @@ carrossel.addEventListener("mousemove",dragging);
 carrossel.addEventListener("scroll",infiniteScroll);
 wrapper.addEventListener("mouseenter",() => clearTimeout(timeoutId) );
 wrapper.addEventListener("mouseleave",autoPlay);
+
+t.style.color="red";
