@@ -204,7 +204,16 @@ body{
   padding: 10px;
   border: 1px solid var(--clr-blueliht);
   border-radius: 10px;
-  background: #fff;
+}
+
+#oneimg{
+  background: url(../img/undraw_medicine_b-1-ol.svg) no-repeat;
+  background-size:cover;
+}
+
+#twoimg{
+  background: url(../img/undraw_high_five_re_jy71.svg) no-repeat;
+  background-size:cover;
 }
 
 .btn{
