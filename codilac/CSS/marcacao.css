@@ -176,3 +176,129 @@ body{
   cursor: pointer;
   color: var(--clr-bluedarck);
 }
+
+.main h1{
+  margin-left: 3rem;
+}
+
+.main h1 span{
+  color: var(--clr-blueliht);
+}
+
+.cards_banner{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.cards_banner .banners{
+  width: 43%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+  padding: 10px;
+  border: 1px solid var(--clr-blueliht);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.btn{
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background: var(--clr-bluedarck);
+  color: #fff;
+  font-size: 16px;
+}
+
+.btn:hover{
+  background: var(--clr-blue);
+}
+
+.other{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.other .bannerFirst{
+  width: 43%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 10px;
+  border: 1px solid var(--clr-blueliht);
+  border-radius: 10px;
+  background: var(--clr-blueliht);
+  color: white;
+}
+
+.other .bannerFirst #title{
+ margin-right: 6rem;
+}
+
+.other .bannerFirst .firstOne{
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 12px;
+  border-radius: 5px;
+  background: #fff;
+  color: #000;
+}
+
+.firstOne button{
+  margin-top: 1rem;
+}
+
+.other .bannerSecond{
+  width: 43%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.other .bannerSecond .bannerOne{
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 5px;
+  background: var(--clr-blueliht);
+  color: #fff;
+}
+
+.btnBannerOne{
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+}
+
+.other .bannerTwo{
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 5px;
+  background: #eee;
+  margin-top: 3rem;
+}
