@@ -62,7 +62,7 @@ body{
   pointer-events: none;
 }
 
-.navigation ul li:nth-child(6){
+.navigation ul li:nth-child(7){
   margin-top: 80px;
 }
 
@@ -310,4 +310,67 @@ body{
   border-radius: 5px;
   background: #eee;
   margin-top: 3rem;
+}
+
+.main_box{
+  width: 95%;
+  position: absolute;
+  margin-left: 1rem;
+  padding: 1rem;
+  border: 2px solid #eee;
+  border-radius: 20px;
+  display: grid;
+  min-height: 500px;
+  background: #fff;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.main_box .mainwrap h1{
+  font-weight: 600;
+  color: var(--clr-blueliht);
+  text-align:start;
+}
+
+.main_box table{
+  width: 100%;
+  border-collapse:collapse;
+  margin-top: 10px;
+}
+
+.main_box table thead td{
+  font-weight: 600;
+
+}
+
+.main_box .btnAgendar{
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  background: var(--clr-blue);
+  color: #fff;
+  font-size: 16px;
+}
+.main_box table tr{
+  color: #000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.main_box table tr:last-child{
+  border-bottom: none;
+}
+
+.main_box table tbody tr:hover{
+  background: #eee;
+  color: #000;
+  border: 1px solid #eee;
+  
+}
+
+.main_box table tr td{
+  padding: 10px;
+}
+
+.main_box table tr td:last-child{
+  text-align: end;
 }
