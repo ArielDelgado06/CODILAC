@@ -317,7 +317,7 @@ body{
   position: absolute;
   margin-left: 1rem;
   padding: 1rem;
-  border: 2px solid #eee;
+  border: 1px solid #eee;
   border-radius: 20px;
   display: grid;
   min-height: 500px;
@@ -373,4 +373,45 @@ body{
 
 .main_box table tr td:last-child{
   text-align: end;
+}
+
+.box{
+  position: absolute;
+  margin-top: 55%;
+  margin-left:1rem;
+  width: 95%;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  display: grid;
+  min-height: 200px;
+  background: #fff;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.boxEspecialista{
+  position: relative;
+  width: 40%;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: row;
+  background: #eee;
+  align-items: center;
+}
+
+.box img{
+  position: relative;
+  width: 65px;
+  height: 65px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.text{
+  margin-left: 0.5rem;
+}
+
+.text a{
+  text-decoration: none;
+  color: var(--clr-blue);
 }
