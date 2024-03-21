@@ -312,6 +312,7 @@ body{
   margin-top: 3rem;
 }
 
+/* tela de agendamentos de consulta */
 .main_box{
   width: 95%;
   position: absolute;
@@ -364,7 +365,6 @@ body{
   background: #eee;
   color: #000;
   border: 1px solid #eee;
-  
 }
 
 .main_box table tr td{
@@ -377,7 +377,7 @@ body{
 
 .box{
   position: absolute;
-  margin-top: 55%;
+  margin-top: 53%;
   margin-left:1rem;
   width: 95%;
   padding: 1rem;
@@ -415,3 +415,122 @@ body{
   text-decoration: none;
   color: var(--clr-blue);
 }
+
+/* Tela de agenda */
+.cardAgenda{
+  width: 20rem;
+  min-height: 10rem;
+  border: 1px solid #eee;
+  margin: 40px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cardAgenda .result{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  padding: 10px 10px;
+  border-radius: 10px 0px;
+}
+
+#one, #for{
+  background: rgb(151, 240, 19);
+}
+
+#two{
+  background: rgb(231, 231, 29);
+}
+
+#thre{
+  background: rgb(231, 36, 36);
+}
+
+.cardAgenda section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 1rem;
+}
+
+.cardAgenda .btnDiv{
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  padding-bottom: 1rem;
+}
+
+.cardAgenda .btnDiv button{
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background: var(--clr-blue);
+  color: #fff;
+  font-size: 14px;
+}
+
+#btnred{
+  background: red;
+}
+
+.card{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+/* Tela de históricos */
+.main_boxH{
+  width: 100%;
+  display: grid;
+  min-height: 500px;
+}
+
+.mainwrapH{
+  font-weight: 600;
+  color: var(--clr-blueliht);
+  text-align:start;
+}
+
+.main_boxH table{
+  width: 100%;
+  border-collapse:collapse;
+}
+
+.main_boxH table thead td{
+  font-weight: 600;
+
+}
+
+.main_boxH table tr{
+  color: #000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.main_boxH table tr:last-child{
+  border-bottom: none;
+}
+
+.main_boxH table tr td{
+  padding: 16px;
+}
+
+.main_boxH table tbody tr:hover{
+  background: #eee;
+  color: #000;
+  border: 1px solid #eee;
+}
+
+.main_boxH table tr td:nth-child(3){
+  text-align: center;
+}
+
+
+
