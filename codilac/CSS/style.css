@@ -539,4 +539,52 @@ body{
 
 
 
+.card-principal{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+ margin: 1rem;
+}
+.cardi{
+  width: 325px;
+  background-color: blue;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px blue;
+  margin: 20px;
+  
+
+}
+.cardi img{
+  width: 100%;
+  height: auto;
+
+}
+.tituloo h2{
+  font-size: 2.5rem;
+  font-weight: 700;
+
+  color: var(--clr-bluedarck);
+  text-align: center;
+  margin-bottom: 1rem;
+
+}
+.card-cardi h2{
+  font-size: 28px;
+  margin-bottom: 8px;
+  text-align: center;
+  color: white;
+
+}
+
+
+
+
+
+
+
+
+
+
 

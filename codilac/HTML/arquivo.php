@@ -6,7 +6,7 @@
     $nome = $_POST['nome'];
     $senha = $_POST['senha'];
 
-    $sqli = "SELECT * FROM cadastros WHERE nome = '$nome' AND senha = '$senha'";
+    $sqli = "SELECT * FROM cadastro WHERE nome = '$nome' AND senha = '$senha'";
 
     $result = $conexao -> query($sqli);
     

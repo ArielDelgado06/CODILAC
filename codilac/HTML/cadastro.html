@@ -7,14 +7,18 @@ if(isset($_POST['submit'])){
     $email = $_POST['email'];
     $telefone = $_POST['telefone'];
     $senha = $_POST['senha'];
-    $conf_senha = $_POST['conf_senha'];
+    $conf_senha = $_POST['confirmação'];
 
-    $sql = "INSERT INTO cadastros(nome,email,telefone,senha,conf_senha)
-      Values('{$nome}','{$email}','{$telefone}','{$senha}','{$conf_senha}')";
+    $sql = "INSERT INTO cadastro (nome,email,telefone,senha,confirmação)
+      Values('{$nome}','{$email}','{$telefone}','{$senha}','{$confirmação}')";
    
      $inserir = mysqli_query($conexao,$sql);
   }
-?>
+  
+ ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -39,31 +43,31 @@ if(isset($_POST['submit'])){
             
             <form action="cadastro.php" method="post">
                 <div class="input-group">
-                    <label for="nome">Nome completo</label>
-                    <input type="text" id="nome" name="nome" placeholder="Digite o seu nome completo" required>
+                    <label id="labelNome" for="nome">Nome </label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite o seu nome completo" >
 
                 </div>
 
                 <div class="input-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email" placeholder="Digite o seu email" required>
+                    <label id="labelEmail" for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Digite o seu email" >
 
                 </div>
                 
                 <div class="input-group">
-                    <label for="telefone">Telefone</label>
+                    <label id="labelTelefone" for="telefone">Telefone</label>
                     <input type="tel" name="telefone" id="telefone" placeholder="Digite o seu numero" required>
 
                 </div>
                 
                 <div class="input-group w50">
-                    <label for="senha">Senha</label>
+                    <label id="labelSenha" for="senha">Senha</label>
                     <input type="Password" name="senha" id="senha" placeholder="Digite sua senha" required>
 
                 </div>
                 <div class="input-group w50">
-                    <label for="confirmar senha">Confirmar senha</label>
-                    <input type="Password" name="conf_senha" id=" confirmar senha" placeholder="confirme sua senha" required>
+                    <label id="labelConfirmação" for="senha">Confirmação </label>
+                    <input type="Password" name="senha" id="confirmação" placeholder="confirme sua senha" required>
 
                 </div>
                 <p>Já é um membro? <a href="login.php">Login</a></p>
@@ -75,6 +79,6 @@ if(isset($_POST['submit'])){
         </div>
     </div>
 
-    <script src="../js/main.js"></script>
+    <script src="../js/validar.js"></script>
 </body>
 </html>
