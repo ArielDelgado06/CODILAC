@@ -7,7 +7,7 @@
   --clr-fc:var(--clr-blue);
 
   --ff:font-family:'Inter', sans-serif;
-  --ff-second:font-family:font-family: 'Be Vietnam Pro', sans-serif;
+  --ff-second:font-family:'Poppins', sans-serif;
 
   --fw-400:font-weight:400;
   --fw-500:font-weight:500;
@@ -37,11 +37,7 @@
   --fs-secondary:var(--fs-700);
   --fs-nav:var(--fs-500);
   --fs-button:var(--fs-300);
-
-
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 /*https://piccalil.li/blog/a-modern-css-reset
 
@@ -249,7 +245,7 @@ svg{
 
 .btn{
   border: none;
-  font-size: 16px;
+  font-size: 1rem;
   color: #fff;
   padding: 8px 16px;
   background: var(--clr-blue);
@@ -257,6 +253,7 @@ svg{
   margin: 14px;
   cursor: pointer;
   transition: all .3s ease;
+  text-decoration: none;
 }
 
 .btn:hover{
@@ -295,11 +292,12 @@ body{
 
 .nav-bar{
   width: 100%;
-  height: 8vh;
+  height: 12vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: .7rem;
+  background: #fffefe;
 }
 
 .nav-bar h1{
@@ -318,7 +316,7 @@ body{
 
 .nav-bar ul li a{
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--clr-bluedarck);
   font-weight: var(--fw-500);
   letter-spacing: 1px;
@@ -346,28 +344,31 @@ body{
 }
 
 .botao{
-  padding: .30em .5em;
-  font-size: 1.2em;
+  width: 8rem;
+  padding: .60em .7em;
+  font-size: 1.1rem;
   background: var(--clr-blueliht);
   color: #fff;
   border-radius: .4rem;
   border: none;
-  padding: 0.7em;
   line-height: 1;
   cursor: pointer;
-  font-weight:400;
+  font-weight:600;
   text-transform: capitalize;
   box-shadow: 0 1.125em 1em -1em var(--clr-blueliht);
   transition: .4s;
+  text-align: center;
+  text-decoration: none;
 }
 
 .botao:hover{
   transform: scale(1.1);
 }
-
+ 
+/*Imagem principal*/
 .main-article{
   width: 100%;
-  height: 40vh;
+  height: 50vh;
   background: url(../img/arseny-togulev\ -\ unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -392,6 +393,7 @@ body{
   margin-bottom: 10px;
 }
 
+/* sessão sobre  */
 .container{
   display: flex;
   flex-direction: row;
@@ -399,15 +401,16 @@ body{
   padding: 2rem 4rem;
 }
 
-.container .mainContainer h2{
+.container .main_container h2{
   font-size: 2.3rem;
   font-weight: 700;
   letter-spacing: .5px;
-  color: var(--clr-bluedarck);
-  text-transform: lowercase;
+  color: hsl(216, 100%, 50%);
+  text-transform: capitalize;
 }
 
-.container .mainContainer{
+
+.container .main_container{
   width: 60%;
   font-size: 1.4rem;
   color: var(--clr-primary-400);
@@ -415,6 +418,77 @@ body{
   text-align:justify;
 }
 
+/* area de nossas instalações */
+.card-img-local{
+  width: 100%;
+  height: auto;
+  padding: 1.75rem;
+  display: flex;
+  background: #eee;
+  flex-direction: column;
+}
+
+.body-img-local{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  padding: 1rem;
+}
+
+.card-img-local .main-img-local{
+  height: auto;
+  display: flex;
+}
+
+.card-img-local h2{
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem;
+  letter-spacing: .5px;
+  color: hsl(216, 100%, 50%);
+}
+
+.main-img-local .img-local{
+  width: 300px;
+  height: 18rem;
+  background: #fff;
+  padding: 0;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px hsl(216, 100%, 50%);
+}
+
+.img-local img{
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+#img_recep{
+  height: 200px;
+}
+.img-local .description {
+  width: 200px;
+  padding: .5rem;
+  background: hsl(216, 100%, 50%);
+  margin: 24px 42px;
+  border: 1px solid hsl(216, 100%, 50%);
+  box-shadow: 1px 4px 4px hsl(216, 100%, 60%);
+  border-radius: 4px;
+} 
+
+.img-local .description h3{
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* Area de numeros do codilac */
 #saibamais{
   width: 100%;
   background: var(--clr-blue);
@@ -454,6 +528,7 @@ body{
   justify-content: center;
 }
 
+/* cards de nossos serviços */
 #sectionServicos{
   width: 100%;
   padding-block: 3rem;
@@ -477,15 +552,19 @@ body{
 }
 
 
+/* area de roda-pé */
 .footer{
+  width: 100%;
+  height: 50vh;
   background: var(--clr-primary-400);
   color: hsl(0 0% 100%);
   padding-block: 3rem;
 }
 
 .footerMain{
-  --max-width:1110px;
-  --padding:1rem;
+  --max-width:100%;
+  --padding:.5rem;
+  height: auto;
   width:min(var(--max-width),100% - (var(--padding)*2));
   margin-inline: auto;
   display: flex;
@@ -494,8 +573,8 @@ body{
 }
 
 .footerMain h1{
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 2.75rem;
+  font-weight: 600;
   letter-spacing: 2px;
   color: var(--clr-blueliht);
   text-transform: uppercase;
@@ -534,57 +613,4 @@ body{
   color: #fff;
   margin-left: 1rem;
 }
-
-
-
-
-
-.card-principal{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
- margin: 1rem;
-}
-.cardi{
-  width: 325px;
-  background-color: blue;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0px 2px 4px blue;
-  margin: 20px;
-  
-
-}
-.cardi img{
-  width: 100%;
-  height: auto;
-
-}
-.tituloo h2{
-  font-size: 2.5rem;
-  font-weight: 700;
-
-  color: var(--clr-bluedarck);
-  text-align: center;
-  margin-bottom: 1rem;
-
-}
-.card-cardi h2{
-  font-size: 28px;
-  margin-bottom: 8px;
-  text-align: center;
-  color: white;
-
-}
-
-
-
-
-
-
-
-
-
-
 
