@@ -149,6 +149,7 @@ body{
   min-height: 100vh;
   background: #fff;
   transition: .5s;
+  background: #eee;
 }
 
 .main.active{
@@ -318,7 +319,7 @@ body{
   position: absolute;
   margin-left: 1rem;
   padding: 1rem;
-  border: 1px solid #eee;
+  border: 1px solid #fff;
   border-radius: 20px;
   display: grid;
   min-height: 500px;
@@ -330,6 +331,7 @@ body{
   font-weight: 600;
   color: var(--clr-blueliht);
   text-align:start;
+  padding-bottom:1rem ;
 }
 
 .main_box table{
@@ -375,9 +377,10 @@ body{
   text-align: end;
 }
 
+
 .box{
   position: absolute;
-  margin-top: 53%;
+  margin-top: 32rem;
   margin-left:1rem;
   width: 95%;
   padding: 1rem;
@@ -391,37 +394,46 @@ body{
 
 .boxEspecialista{
   position: relative;
-  width: 40%;
+  width: 40rem;
   padding: 5px 10px;
   display: flex;
   flex-direction: row;
   background: #eee;
   align-items: center;
+  gap: 2rem;
+  text-decoration: none;
+  color: var(--clr-blue);
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .box img{
   position: relative;
-  width: 65px;
-  height: 65px;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50px;
   overflow: hidden;
 }
 
-.text{
-  margin-left: 0.5rem;
+/* .boxEspecialista ul{
+  margin-left: 2rem;
+  margin-top: 2rem;
+  list-style-type: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: .4rem;
 }
 
-.text a{
-  text-decoration: none;
-  color: var(--clr-blue);
-}
+.boxEspecialista ul li{
+  text-align: center;
+  margin-top: .1rem;
+} */
 
 /* Tela de agenda */
 .cardAgenda{
   width: 20rem;
   min-height: 10rem;
   border: 1px solid #eee;
-  margin: 40px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -483,6 +495,9 @@ body{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 
