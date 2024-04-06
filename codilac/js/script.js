@@ -29,12 +29,14 @@ const event_button = () =>{
   const titleContent = document.createElement('h2');
   titleContent.innerText = 'Especialista';
 
-  const box_especialista = document.createElement('div');
+  const box_especialista = document.createElement('a');
   box_especialista.classList.add("boxEspecialista");
 
   const box_img = document.createElement('img');
+
   const subTitleContent = document.createElement('h3');
-  subTitleContent.innerText = "Dr. António Gaspar";
+  const textH3 = document.createTextNode("Dr. António Gaspar");
+  subTitleContent.appendChild(textH3);
 
   box.appendChild(titleContent);
   box.appendChild(box_especialista);
