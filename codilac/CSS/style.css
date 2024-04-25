@@ -1,100 +1,11 @@
-:root{
-  /*site de paleta de cores -- link:https://goodesign.com.br/o/cores/*/
-  --clr-blueliht:hsl(216, 100%, 60%);
-  --clr-blue:hsl(216, 100%, 50%);
-  --clr-bluedarck:hsl(216, 100%, 40%);
-  --clr-primary-400:hsl(228,39%,23%);
-  --clr-fc:var(--clr-blue);
-
-  --ff:font-family:'Inter', sans-serif;
-  --ff-second:font-family:'Poppins', sans-serif;
-
-  --fw-400:font-weight:400;
-  --fw-500:font-weight:500;
-  --fw-600:font-weight:600;
-  --fw-700:font-weight:700;
-
-  --size-100:.25rem;
-  --size-200:.5rem;
-  --size-300:.75rem;
-  --size-400: 1rem;
-  --size-500: 1.5rem;
-  --size-600: 2rem;
-  --size-700: 3rem;
-  --size-800: 4rem;
-  --size-900: 5rem;
-
-  --fs-300:.8125rem;
-  --fs-400:.875rem;
-  --fs-500:.9375rem;
-  --fs-600:1rem;
-  --fs-700:1.875rem;
-  --fs-800:2.5rem;
-  --fs-900:3.5rem;
-
-  --fs-body:var(--fs-400);
-  --fs-primary-:var(--fs-800);
-  --fs-secondary:var(--fs-700);
-  --fs-nav:var(--fs-500);
-  --fs-button:var(--fs-300);
-}
-
-/*https://piccalil.li/blog/a-modern-css-reset
-
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove default margin */
-*{
-  margin: 0;
-  padding: 0;
-  font: inherit;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-html,
-body{
-  height: 100%;
-}
-/* Set core body defaults */
-body {
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture,
-svg{
-  max-width: 100%;
-  display: block;
-}
+@import url(/CSS/global-style.css);
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -105,48 +16,49 @@ svg{
   }
 }
 
-.main-services{
+.main-services {
   display: flex;
   align-items: center;
   min-height: 100vh;
   padding: 0 35px;
 }
 
-.wrapper{
+.wrapper {
   position: relative;
   max-width: 1100px;
   width: 100%;
 }
-.wrapper .carrossel{
+
+.wrapper .carrossel {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: calc((100% / 3) - 12px);
   gap: 16px;
   overflow-x: auto;
-  scroll-snap-type:x mandatory ;
+  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scrollbar-width: 0;
 }
 
-.carrossel::-webkit-scrollbar{
+.carrossel::-webkit-scrollbar {
   display: none;
 }
 
-.carrossel.no-transitio{
+.carrossel.no-transitio {
   scroll-behavior: auto;
 }
 
-.wrapper .dragging{
-  scroll-snap-type:none;
+.wrapper .dragging {
+  scroll-snap-type: none;
   scroll-behavior: auto;
 }
 
-.wrapper .dragging .card{
+.wrapper .dragging .card {
   cursor: grab;
   user-select: none;
 }
 
-.wrapper i{
+.wrapper i {
   height: 50px;
   width: 50px;
   background: #fff;
@@ -161,61 +73,61 @@ svg{
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.wrapper i:first-child{
+.wrapper i:first-child {
   left: -60px;
 }
 
-.wrapper i:last-child{
+.wrapper i:last-child {
   right: -22px;
 }
 
-.carrossel .card{
+.carrossel .card {
   scroll-snap-align: start;
   list-style: none;
 }
 
 /* resposividade nos cardes  */
-@media screen and (max-width:900px){
-  .wrapper .carrossel{
-   
+@media screen and (max-width:900px) {
+  .wrapper .carrossel {
+
     grid-auto-columns: calc((100% / 2) - 9px);
-    
+
   }
 }
 
-@media screen and (max-width:600px){
-  .wrapper .carrossel{
+@media screen and (max-width:600px) {
+  .wrapper .carrossel {
     grid-auto-columns: 100%;
-    
+
   }
 }
 
 .imgem-content,
-.card-content{
+.card-content {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-items: center;
   padding: 10px 14px;
 }
 
-.imgem-content{
+.imgem-content {
   position: relative;
   row-gap: 5px;
   padding: 25px 0;
 }
 
-.overlay{
+.overlay {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background:var(--clr-blue);
+  background: var(--clr-blue);
   border-radius: 25px 25px 0 25px;
 }
 
 .overlay::before,
-.overlay::after{
+.overlay::after {
   content: "";
   position: absolute;
   right: 0;
@@ -225,25 +137,25 @@ svg{
   background: var(--clr-blue);
 }
 
-.overlay::after{
+.overlay::after {
   border-radius: 0 25px 0 0;
   background: #fff;
 }
 
-.name{
-  font-size:18px;
+.name {
+  font-size: 18px;
   font-weight: 500;
-  color:#333;
+  color: #333;
 }
 
-.description{
+.description {
   font-size: 14px;
   font-weight: 500;
   color: #707070;
   text-align: center;
 }
 
-.btn{
+.btn {
   border: none;
   font-size: 1rem;
   color: #fff;
@@ -256,16 +168,17 @@ svg{
   text-decoration: none;
 }
 
-.btn:hover{
+.btn:hover {
   background: var(--clr-blueliht);
 }
 
-.card{
+.card {
   width: 320px;
   border-radius: 25px;
   background: #fff;
 }
-.card-imagem{
+
+.card-imagem {
   position: relative;
   height: 150px;
   width: 150px;
@@ -273,7 +186,7 @@ svg{
   border: 4px solid #fff;
 }
 
-.card-imagem .card-img{
+.card-imagem .card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -283,14 +196,14 @@ svg{
 
 /* utilitários */
 
-body{
+body {
   width: 100%;
   height: 100vh;
-  font-size:var(--fs-body);
+  font-size: var(--fs-body);
   color: var(--clr-primary-400);
 }
 
-.nav-bar{
+.nav-bar {
   width: 100%;
   height: 12vh;
   display: flex;
@@ -300,7 +213,7 @@ body{
   background: #fffefe;
 }
 
-.nav-bar h1{
+.nav-bar h1 {
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 2px;
@@ -308,13 +221,13 @@ body{
   text-transform: uppercase;
 }
 
-.nav-bar ul{
+.nav-bar ul {
   list-style-type: none;
   display: flex;
   gap: 2rem;
 }
 
-.nav-bar ul li a{
+.nav-bar ul li a {
   text-decoration: none;
   font-size: 1.3rem;
   color: var(--clr-bluedarck);
@@ -322,28 +235,28 @@ body{
   letter-spacing: 1px;
 }
 
-.nav-bar ul li a:hover{
+.nav-bar ul li a:hover {
   cursor: pointer;
   color: var(--clr-bluedarck);
 }
 
-.transicao::after{
+.transicao::after {
   content: '';
   display: block;
   height: 2px;
   width: 0;
   transition: .5s;
-  background:var(--clr-bluedarck);
-  
+  background: var(--clr-bluedarck);
+
 }
 
-.transicao:hover:after{
+.transicao:hover:after {
   width: 100%;
   transition: .5s;
 
 }
 
-.botao{
+.botao {
   width: 8rem;
   padding: .60em .7em;
   font-size: 1.1rem;
@@ -353,7 +266,7 @@ body{
   border: none;
   line-height: 1;
   cursor: pointer;
-  font-weight:600;
+  font-weight: 600;
   text-transform: capitalize;
   box-shadow: 0 1.125em 1em -1em var(--clr-blueliht);
   transition: .4s;
@@ -361,12 +274,12 @@ body{
   text-decoration: none;
 }
 
-.botao:hover{
+.botao:hover {
   transform: scale(1.1);
 }
- 
+
 /*Imagem principal*/
-.main-article{
+.main-article {
   width: 100%;
   height: 50vh;
   background: url(../img/arseny-togulev\ -\ unsplash.jpg);
@@ -375,18 +288,18 @@ body{
   padding: 4rem;
 }
 
-.main-article h1{
+.main-article h1 {
   font-size: 3rem;
   font-weight: 700;
   letter-spacing: 1px;
-  color:var(--clr-primary-400);
+  color: var(--clr-primary-400);
 }
 
-.main-article span{
+.main-article span {
   color: var(--clr-blueliht);
 }
 
-.main-article p{
+.main-article p {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--clr-primary-400);
@@ -394,14 +307,14 @@ body{
 }
 
 /* sessão sobre  */
-.container{
+.container {
   display: flex;
   flex-direction: row;
   gap: 1rem;
   padding: 2rem 4rem;
 }
 
-.container .main_container h2{
+.container .main_container h2 {
   font-size: 2.3rem;
   font-weight: 700;
   letter-spacing: .5px;
@@ -410,16 +323,16 @@ body{
 }
 
 
-.container .main_container{
+.container .main_container {
   width: 60%;
   font-size: 1.4rem;
   color: var(--clr-primary-400);
   font-weight: 500;
-  text-align:justify;
+  text-align: justify;
 }
 
 /* area de nossas instalações */
-.card-img-local{
+.card-img-local {
   width: 100%;
   height: auto;
   padding: 1.75rem;
@@ -428,7 +341,7 @@ body{
   flex-direction: column;
 }
 
-.body-img-local{
+.body-img-local {
   width: 100%;
   height: auto;
   display: flex;
@@ -439,12 +352,12 @@ body{
   padding: 1rem;
 }
 
-.card-img-local .main-img-local{
+.card-img-local .main-img-local {
   height: auto;
   display: flex;
 }
 
-.card-img-local h2{
+.card-img-local h2 {
   font-size: 2.3rem;
   font-weight: 700;
   text-align: center;
@@ -453,7 +366,7 @@ body{
   color: hsl(216, 100%, 50%);
 }
 
-.main-img-local .img-local{
+.main-img-local .img-local {
   width: 300px;
   height: 18rem;
   background: #fff;
@@ -462,15 +375,16 @@ body{
   box-shadow: 0 1px 1px hsl(216, 100%, 50%);
 }
 
-.img-local img{
+.img-local img {
   width: 100%;
   height: auto;
   border-radius: 4px;
 }
 
-#img_recep{
+#img_recep {
   height: 200px;
 }
+
 .img-local .description {
   width: 200px;
   padding: .5rem;
@@ -479,9 +393,9 @@ body{
   border: 1px solid hsl(216, 100%, 50%);
   box-shadow: 1px 4px 4px hsl(216, 100%, 60%);
   border-radius: 4px;
-} 
+}
 
-.img-local .description h3{
+.img-local .description h3 {
   font-size: 18px;
   font-weight: 600;
   color: #fff;
@@ -489,38 +403,39 @@ body{
 }
 
 /* Area de numeros do codilac */
-#saibamais{
+#saibamais {
   width: 100%;
   background: var(--clr-blue);
   padding-block: 2rem;
   color: #fff;
 }
 
-.main-div{
+.main-div {
   display: flex;
   flex-direction: column;
-  padding:0 3rem;
+  padding: 0 3rem;
 }
 
-#saibamais h2{
+#saibamais h2 {
   font-size: 2.5rem;
   font-weight: 600;
   letter-spacing: 1px;
   margin-left: 1rem;
 }
-#saibamais p{
+
+#saibamais p {
   font-size: 1.1rem;
   font-weight: 500;
   margin-left: 1rem;
 }
 
-#saibamais .n p{
+#saibamais .n p {
   font-size: 1.4rem;
   font-weight: 500;
   letter-spacing: 1px
 }
 
-.numeros{
+.numeros {
   display: flex;
   flex-direction: row;
   gap: 8rem;
@@ -529,13 +444,13 @@ body{
 }
 
 /* cards de nossos serviços */
-#sectionServicos{
+#sectionServicos {
   width: 100%;
   padding-block: 3rem;
   background: #eee;
 }
 
-#sectionServicos h2{
+#sectionServicos h2 {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--clr-bluedarck);
@@ -543,7 +458,7 @@ body{
   margin-bottom: 1rem;
 }
 
-.main-services{
+.main-services {
   min-height: 40vh;
   display: flex;
   align-items: center;
@@ -553,7 +468,7 @@ body{
 
 
 /* area de roda-pé */
-.footer{
+.footer {
   width: 100%;
   height: 50vh;
   background: var(--clr-primary-400);
@@ -561,18 +476,18 @@ body{
   padding-block: 3rem;
 }
 
-.footerMain{
-  --max-width:100%;
-  --padding:.5rem;
+.footerMain {
+  --max-width: 100%;
+  --padding: .5rem;
   height: auto;
-  width:min(var(--max-width),100% - (var(--padding)*2));
+  width: min(var(--max-width), 100% - (var(--padding)*2));
   margin-inline: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.footerMain h1{
+.footerMain h1 {
   font-size: 2.75rem;
   font-weight: 600;
   letter-spacing: 2px;
@@ -580,7 +495,7 @@ body{
   text-transform: uppercase;
 }
 
-.footerMain h2{
+.footerMain h2 {
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 2px;
@@ -588,7 +503,7 @@ body{
   text-transform: uppercase;
 }
 
-.footerMain .footerNav li{
+.footerMain .footerNav li {
   list-style-type: none;
   font-size: 1.2rem;
   font-weight: 500;
@@ -596,7 +511,7 @@ body{
   margin-left: 1rem;
 }
 
-.footerMain .footerNav li a{
+.footerMain .footerNav li a {
   list-style-type: none;
   font-size: 1.2rem;
   font-weight: 500;
@@ -604,13 +519,13 @@ body{
   color: #fff;
 }
 
-.footerMain .redesSociais li{
+.footerMain .redesSociais li {
   list-style-type: none;
 }
-.footerMain .redesSociais li a{
-  font-size: 1.2rem; 
+
+.footerMain .redesSociais li a {
+  font-size: 1.2rem;
   font-weight: 500;
   color: #fff;
   margin-left: 1rem;
 }
-
