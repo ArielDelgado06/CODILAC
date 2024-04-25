@@ -17,9 +17,9 @@ body{
 }
 
 .container{
-  position: relative;
-  width: 80%;
-  height: 100vh;
+  position:relative;
+  width: 60%;
+  height: 75vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -27,10 +27,16 @@ body{
 }
 
 .img{
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.img img{
+  position: relative;
+  width: 400px;
+  height: 50%;
+  border-radius: 4px;
 }
 
 .img_content{

@@ -9,17 +9,18 @@
 
 body{
   background: hsl(216, 100%, 60%);
-  display: grid;
-  place-content: center;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100vh;
 }
 
 .container{
   width: 90%;
-  height: auto;
+  height: 0 auto;
   display: flex;
+  flex-direction: row;
   box-shadow: 5px 5px 10px rgb(0, 0, 0,0.212);
   border-radius: 4px;
 }
@@ -29,6 +30,11 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.img img{
+  width:400px;
+  height:100%;
 }
 
 .img_content{
@@ -143,6 +149,7 @@ body{
 }
 
 .input-button{
+  position: relative;
   width: 50%;
   padding: 8px;
   margin-top: 2.5rem;

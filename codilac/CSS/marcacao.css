@@ -457,7 +457,7 @@ body{
 
 .content_box .submit_agendar{
   width: 6.5rem;
-  height: 2rem;
+  height: 2.3rem;
   padding: .4rem;
   outline: none;
   border: none;
@@ -569,20 +569,6 @@ body{
 .activo::before{
   background: var(--clr-blue);
 }
-
-/* .boxEspecialista ul{
-  margin-left: 2rem;
-  margin-top: 2rem;
-  list-style-type: none;
-  font-size: 16px;
-  font-weight: 500;
-  padding: .4rem;
-}
-
-.boxEspecialista ul li{
-  text-align: center;
-  margin-top: .1rem;
-} */
 
 /* Tela de agenda */
 .cardAgenda{
@@ -701,6 +687,3 @@ body{
 .main_boxH table tr td:nth-child(3){
   text-align: center;
 }
-
-
-

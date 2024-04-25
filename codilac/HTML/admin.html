@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet"/>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Codilac-admin</title>
+  <link rel="stylesheet" href="../css/marcacao.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <div class="container">
+    <div class="navigation">
+      <ul>
+        <li><a href="#">
+          <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+          <span id="mainTitle" class="title">Admin</span>
+        </a></li>
+
+        <li><a href="home.html">
+          <span class="icon"><ion-icon name="apps-outline"></ion-icon></span>
+          <span class="title">Painel de controle</span>
+        </a></li>
+
+        <li><a href="home.html">
+          <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+          <span class="title">Cadastrar dentista</span>
+        </a></li>
+
+        <li><a href="agenda.html">
+          <span class="icon"><ion-icon name="calendar-number-outline"></ion-icon></span>
+          <span class="title">Agendamentos</span>
+        </a></li>
+
+        <li><a href="historico.html">
+          <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+          <span class="title">Histórico</span>
+        </a></li>
+
+        <li><a href="historico.html">
+          <span class="icon"><ion-icon name="folder-outline"></ion-icon></span>
+          <span class="title">Consultas Registrados</span>
+        </a></li>
+
+
+        <li><a href="index.html">
+          <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+          <span class="title">Sair</span>
+        </a></li>
+      </ul>
+    </div>
+
+    <div class="main">
+
+      <div class="topbar">
+        <div class="toggle">
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
+      </div>
+
+      <h1>Painel de controle</h1>
+
+      <div class="information_card">
+        <div id="informations_cards" class="tot_paciente">
+          <div class="title_icon">
+            <h3>Total de pacientes</h3>
+            <span><ion-icon name="people"></ion-icon></span>
+          </div>
+          <div class="result"></div>
+        </div>
+        <div id="informations_cards" class="today_agenda">
+          <div class="title_icon">
+            <h3>Agenda de Hoje</h3>
+            <span><ion-icon name="calendar"></ion-icon></span>
+          </div>
+          <div class="result"></div>
+        </div>
+        <div id="informations_cards" class="pacientes_agendados">
+          <div class="title_icon">
+            <h3>Pacientes agendados</h3>
+           <span><ion-icon name="time"></ion-icon></span> 
+          </div>
+          <div class="result"></div>
+        </div>
+      </div>
+
+      <div class="box_main">
+        <h2>Pacientes de hoje</h2>
+        <div class="box">
+          <div class="today_pacientes">
+
+          </div>
+          <div class="grafic">
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
