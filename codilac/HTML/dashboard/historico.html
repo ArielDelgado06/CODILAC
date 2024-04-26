@@ -11,7 +11,7 @@
     rel="stylesheet" />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <title>Agendar consulta</title>
-  <link rel="stylesheet" href="../CSS/marcacao.css">
+  <link rel="stylesheet" href="../../CSS/marcacao.css">
 </head>
 
 <body>
@@ -28,14 +28,14 @@
             <span class="title">Home</span>
           </a></li>
 
-        <li><a href="#">
+        <li><a href="perfil.html">
             <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
             <span class="title">Meu perfil</span>
           </a></li>
 
         <li><a href="agendar.html">
             <span class="icon"><ion-icon name="create-outline"></ion-icon></span>
-            <span class="title">Agendar Consulta <a href="agendar.html"></a></span>
+            <span class="title">Agendar Consulta</span>
           </a></li>
 
         <li><a href="agenda.html">
@@ -57,65 +57,76 @@
     </div>
 
     <div class="main">
+
       <div class="topbar">
         <div class="toggle">
           <ion-icon name="menu-outline"></ion-icon>
         </div>
       </div>
 
-      <h1>Olá, <span>Gouveia</span></h1>
-      <div class="cards_banner">
-        <div class="banners" id="oneimg">
-          <h2>Agendar consulta</h2>
-          <button class="btn">Ver agendamentos</button>
+      <div class="main_box">
+
+        <div class="mainwrapH">
+          <h1>Histórico de consultas</h1>
         </div>
-        <div class="banners" id="twoimg">
-          <h2>Agendar exame</h2>
-          <button class="btn">Ver exames</button>
-        </div>
+        <table>
+          <thead>
+            <tr>
+              <td>Data</td>
+              <td>Hora</td>
+              <td>Especialidade</td>
+              <td>Médico</td>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>26/03/2024</td>
+              <td>08:30</td>
+              <td>Dentista</td>
+              <td>Fábio Mendes</td>
+            </tr>
+
+            <tr>
+              <td>16/03/2024</td>
+              <td>09:10</td>
+              <td>Dentista</td>
+              <td>Gonçalves Neves</td>
+            </tr>
+
+            <tr>
+              <td>26/03/2024</td>
+              <td>08:30</td>
+              <td>Dentista</td>
+              <td>Fábio Mendes</td>
+            </tr>
+
+            <tr>
+              <td>06/03/2024</td>
+              <td>10:30</td>
+              <td>Dentista</td>
+              <td>Rosa Gaspar</td>
+            </tr>
+
+            <tr>
+              <td>20/03/2024</td>
+              <td>14:00</td>
+              <td>Dentista</td>
+              <td>Maria Antónia</td>
+            </tr>
+
+          </tbody>
+        </table>
       </div>
 
-      <div class="other">
-        <div class="bannerFirst">
-          <h2 id="title">Consultas agendadas</h2>
-          <div class="firstOne">
-            <h2>Consulta cancelada</h2>
-            <p>Sem especialista disponível</p>
-            <button class="btn">Remarcar consulta</button>
-          </div>
-
-          <div class="firstOne">
-            <h2>Consulta Realizada</h2>
-            <p>higiene bucal</p>
-          </div>
-
-          <div class="firstOne">
-            <h2>Consulta cancelada</h2>
-            <p>Médico indisponível</p>
-          </div>
-        </div>
-        <div class="bannerSecond">
-          <div class="bannerOne">
-            <h2>Receituário</h2>
-            <button class="btnBannerOne">Ver Receituário</button>
-          </div>
-          <div class="bannerTwo">
-            <h2>Resultado dos exames</h2>
-          </div>
-        </div>
-
-      </div>
     </div>
 
-  </div>
 
 
-
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script src="../js/redirect.js"></script>
-  <script src="../js/script.js"></script>
-  <script src="../js/redirect.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/redirect.js"></script>
 </body>
 
 </html>

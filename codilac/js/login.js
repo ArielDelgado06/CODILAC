@@ -10,6 +10,7 @@ function isLoad() {
 }
 
 async function handleLogin(nome, senha) {
+  console.log('clicou')
   try {
     isLoad()
     const response = await fetch('http://localhost:3333/login', {
@@ -29,7 +30,7 @@ async function handleLogin(nome, senha) {
     }
 
     localStorage.setItem('id', data.id)
-    window.location.href = "home.html"
+    window.location.href = "../dashboard/home.html"
   } catch (error) {
     console.log(error)
   } finally {

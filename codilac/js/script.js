@@ -55,7 +55,7 @@ const link = document.getElementById('link-sair')
 
 function logout() {
   localStorage.removeItem('id')
-  window.location.replace('login.html')
+  window.location.replace('../site/login.html')
 }
 
 

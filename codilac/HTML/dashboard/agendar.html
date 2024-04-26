@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,300&display=swap"
+    rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <title>Agendar consulta</title>
-  <link rel="stylesheet" href="../CSS/marcacao.css">
+  <link rel="stylesheet" href="../../CSS/marcacao.css">
 </head>
 
 <body>
@@ -28,14 +28,14 @@
             <span class="title">Home</span>
           </a></li>
 
-        <li><a href="#">
+        <li><a href="perfil.html">
             <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
             <span class="title">Meu perfil</span>
           </a></li>
 
         <li><a href="agendar.html">
             <span class="icon"><ion-icon name="create-outline"></ion-icon></span>
-            <span class="title">Agendar Consulta <a href="agendar.html"></a></span>
+            <span class="title">Agendar Consulta</span>
           </a></li>
 
         <li><a href="agenda.html">
@@ -63,57 +63,63 @@
         </div>
       </div>
 
-      <h1>Olá, <span>Gouveia</span></h1>
-      <div class="cards_banner">
-        <div class="banners" id="oneimg">
-          <h2>Agendar consulta</h2>
-          <button class="btn">Ver agendamentos</button>
-        </div>
-        <div class="banners" id="twoimg">
-          <h2>Agendar exame</h2>
-          <button class="btn">Ver exames</button>
-        </div>
-      </div>
+      <div class="main_box">
 
-      <div class="other">
-        <div class="bannerFirst">
-          <h2 id="title">Consultas agendadas</h2>
-          <div class="firstOne">
-            <h2>Consulta cancelada</h2>
-            <p>Sem especialista disponível</p>
-            <button class="btn">Remarcar consulta</button>
-          </div>
-
-          <div class="firstOne">
-            <h2>Consulta Realizada</h2>
-            <p>higiene bucal</p>
-          </div>
-
-          <div class="firstOne">
-            <h2>Consulta cancelada</h2>
-            <p>Médico indisponível</p>
-          </div>
-        </div>
-        <div class="bannerSecond">
-          <div class="bannerOne">
-            <h2>Receituário</h2>
-            <button class="btnBannerOne">Ver Receituário</button>
-          </div>
-          <div class="bannerTwo">
-            <h2>Resultado dos exames</h2>
-          </div>
+        <div class="mainwrap">
+          <h1>Agendar Consultas</h1>
         </div>
 
+        <table>
+          <thead>
+            <tr>
+              <td>Consulta</td>
+              <td>Preço</td>
+              <td>Agendar</td>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Branqueamento</td>
+              <td>20.000,00kz</td>
+              <td><button id="button-one" class="btnAgendar">Prosseguir</button></td>
+            </tr>
+
+            <tr>
+              <td>Higiene Bucal</td>
+              <td>50.000,00kz</td>
+              <td><button class="btnAgendar">Prosseguir</button></td>
+            </tr>
+
+            <tr>
+              <td>Lavagem</td>
+              <td>10.000,00kz</td>
+              <td><button class="btnAgendar">Prosseguir</button></td>
+            </tr>
+
+            <tr>
+              <td>Clareamento</td>
+              <td>70.000,00kz</td>
+              <td><button class="btnAgendar">Prosseguir</button></td>
+            </tr>
+
+            <tr>
+              <td>Bichectomia</td>
+              <td>40.000,00kz</td>
+              <td><button class="btnAgendar">Prosseguir</button></td>
+            </tr>
+
+          </tbody>
+        </table>
       </div>
     </div>
 
   </div>
 
-
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script src="../js/redirect.js"></script>
-  <script src="../js/script.js"></script>
+  <script src="../../js/redirect.js"></script>
+  <script src="../../js/script.js"></script>
 </body>
 
 </html>

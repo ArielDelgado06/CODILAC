@@ -92,6 +92,8 @@ svg{
 }
 
 // Componentes 
+
+// Button
 #botao{
   border: none;
   color:#fff;
@@ -99,6 +101,7 @@ svg{
   margin-top: 1rem;
   background: hsl(216, 100%, 50%);
   text-align: center;
+  cursor: pointer;
 }
 
 #botao:hover{

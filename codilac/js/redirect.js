@@ -3,7 +3,7 @@
     const id = localStorage.getItem('id')
 
     if (!id || id === '') {
-      window.location.href = "login.html"
+      window.location.href = "../site/login.html"
     }
   }, 500)
 })()
