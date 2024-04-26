@@ -48,6 +48,19 @@
 //     renderizarCalendario();
 //   });
 // });
+
+//
+
+const link = document.getElementById('link-sair')
+
+function logout() {
+  localStorage.removeItem('id')
+  window.location.replace('login.html')
+}
+
+
+
+
 // ------------------
 
 let list = document.querySelectorAll('.navigation li');
@@ -57,16 +70,16 @@ const main = document.querySelector('.main');
 
 
 
-function activeLink () {
-  list.forEach( item => {
+function activeLink() {
+  list.forEach(item => {
     item.classList.remove("hovered");
   })
   this.classList.add("hovered");
 }
 
-list.forEach(item  => item.addEventListener("mouseover",activeLink));
+list.forEach(item => item.addEventListener("mouseover", activeLink));
 
-toggle.onclick = () =>{
+toggle.onclick = () => {
   navigation.classList.toggle("active");
   main.classList.toggle("active");
 }
@@ -75,7 +88,7 @@ toggle.onclick = () =>{
 const button_one = document.querySelector("#button-one");
 const main_conteiner = document.querySelector(".main");
 
-const event_button = () =>{
+const event_button = () => {
   const box_container_consult = document.createElement('div');
   box_container_consult.classList.add('box_container_consult');
 
@@ -127,25 +140,25 @@ const event_button = () =>{
   const icon_right_name = document.createAttribute('name');
   icon_right_name.value = "chevron-forward-outline";
   icon_right.setAttributeNode(icon_right_name);
-  
+
   const calendario = document.createElement('div');
   calendario.classList.add('calendario');
   const semanas = document.createElement('ul');
   semanas.classList.add('semanas');
   const list_Dom = document.createElement('li');
-  list_Dom.innerText="Dom";
+  list_Dom.innerText = "Dom";
   const list_Seg = document.createElement('li');
-  list_Seg.innerText="Seg";
+  list_Seg.innerText = "Seg";
   const list_Ter = document.createElement('li');
-  list_Ter.innerText="Ter";
+  list_Ter.innerText = "Ter";
   const list_Quart = document.createElement('li');
-  list_Quart.innerText="Quart";
+  list_Quart.innerText = "Quart";
   const list_Qui = document.createElement('li');
-  list_Qui.innerText="Qui";
+  list_Qui.innerText = "Qui";
   const list_Sex = document.createElement('li');
-  list_Sex.innerText="Sex";
+  list_Sex.innerText = "Sex";
   const list_Sab = document.createElement('li');
-  list_Sab.innerText="Sab";
+  list_Sab.innerText = "Sab";
   const calendario_dias = document.createElement('ul');
   calendario_dias.classList.add('dias');
 
@@ -220,55 +233,61 @@ const event_button = () =>{
 
   // ------------------
 
-const current_date = document.querySelector('.current_date');
-const dias = document.querySelector('.dias');
-const icons = document.querySelectorAll('.icons span');
+  const current_date = document.querySelector('.current_date');
+  const dias = document.querySelector('.dias');
+  const icons = document.querySelectorAll('.icons span');
 
-let data = new Date(),
-currYear = data.getFullYear(),
-currMoth = data.getMonth();
+  let data = new Date(),
+    currYear = data.getFullYear(),
+    currMoth = data.getMonth();
 
-const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+  const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
 
-const renderizarCalendario = () => {
-  let primeiroDiaDoMes = new Date(currYear, currMoth, 1).getDate();
-  ultimoDiaDoMes = new Date(currYear, currMoth + 1, 0).getDate();
-  ultimoMes = new Date(currYear, currMoth, ultimoDiaDoMes).getDate();
-  ultimaDataDoMes = new Date(currYear, currMoth, 0).getDate();
-  let litag = "";
+  const renderizarCalendario = () => {
+    let primeiroDiaDoMes = new Date(currYear, currMoth, 1).getDate();
+    ultimoDiaDoMes = new Date(currYear, currMoth + 1, 0).getDate();
+    ultimoMes = new Date(currYear, currMoth, ultimoDiaDoMes).getDate();
+    ultimaDataDoMes = new Date(currYear, currMoth, 0).getDate();
+    let litag = "";
 
-  for(let day = primeiroDiaDoMes; day > 0; day--){ 
-    litag += `<li class="inativo">${ultimaDataDoMes - day + 1}</li>`;
-  }
-
-  for(let day = 1; day <= ultimoDiaDoMes; day++){
-    let hoje = day === data.getDate() && currMoth === new Date().getMonth()
-    && currYear === new Date().getFullYear() ? "activo" : "";
-    litag += `<li class="${hoje}">${day}</li>`;
-  }
-
-  for(let day = ultimoMes; day < 6 ; day++){ 
-    litag += `<li class="inativo">${day - ultimoMes + 1}</li>`;
-}
-
-  current_date.innerText = `${meses[currMoth]}  ${currYear}`;
-  dias.innerHTML = litag;
-}
-renderizarCalendario();
-
-icons.forEach( icon => {
-  icon.addEventListener("click",() => {
-    currMoth = icon.id === "prev" ? currMoth - 1 : currMoth + 1;
-    if(currMoth < 0 || currMoth > 11 ){
-      data = new Date(currYear, currMoth);
-      currYear = date.getFullYear();
-      currMoth = date.getMonth();
-    } else{
-      data = new Date();
+    for (let day = primeiroDiaDoMes; day > 0; day--) {
+      litag += `<li class="inativo">${ultimaDataDoMes - day + 1}</li>`;
     }
-    renderizarCalendario();
+
+    for (let day = 1; day <= ultimoDiaDoMes; day++) {
+      let hoje = day === data.getDate() && currMoth === new Date().getMonth()
+        && currYear === new Date().getFullYear() ? "activo" : "";
+      litag += `<li class="${hoje}">${day}</li>`;
+    }
+
+    for (let day = ultimoMes; day < 6; day++) {
+      litag += `<li class="inativo">${day - ultimoMes + 1}</li>`;
+    }
+
+    current_date.innerText = `${meses[currMoth]}  ${currYear}`;
+    dias.innerHTML = litag;
+  }
+  renderizarCalendario();
+
+  icons.forEach(icon => {
+    icon.addEventListener("click", () => {
+      currMoth = icon.id === "prev" ? currMoth - 1 : currMoth + 1;
+      if (currMoth < 0 || currMoth > 11) {
+        data = new Date(currYear, currMoth);
+        currYear = date.getFullYear();
+        currMoth = date.getMonth();
+      } else {
+        data = new Date();
+      }
+      renderizarCalendario();
+    });
   });
-});
 }
 
-button_one.addEventListener("click", () => event_button() );
+link.addEventListener('click', (event) => {
+  event.preventDefault()
+  logout()
+})
+
+button_one.addEventListener("click", () => event_button());
+

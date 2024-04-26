@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Codilac-Cadastro</title>
   <link rel="stylesheet" href="../css/cadastro.css">
 </head>
+
 <body>
   <div class="container">
 
@@ -17,79 +19,78 @@
       </div>
     </div>
 
-      <form action="" class="content">
-        <div class="header">
-          <h1>Cadastre-se</h1>
-          <a href="login.html">Login</a>
+    <form action="" class="content">
+      <div class="header">
+        <h1>Cadastre-se</h1>
+        <a href="login.html">Login</a>
+      </div>
+      <div class="input_grup">
+
+        <div class="input-box">
+          <label for="nome">Nome</label>
+          <input type="text" name="nome" id="nome" placeholder="Nome" required>
         </div>
-        <div class="input_grup">
 
-          <div class="input-box">
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome" placeholder="Nome" required>
-          </div>
-
-          <div class="input-box">
-            <label for="senha">Sobrenome</label>
+        <div class="input-box">
+          <label for="senha">Sobrenome</label>
           <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" required>
-          </div> 
-       
-          <div class="input-box">
-            <label for="dataNasc">Data de nascimento</label>
-            <input type="date" name="dataNasc" id="dataNasc" required>
-          </div>
-        
-          <div class="input-box">
-            <label for="telefone">Telefone</label>
-            <input type="number" name="telefone" id="telefone" placeholder="ex. +244 xxx xxx xxx" required>
-          </div>
-          <div class="input-box">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="ex. arieldelgado@gmail.com" required>
-          </div>
-          <div class="input-box">
-            <label for="local">Endereço</label>
-            <input type="text" name="endereco" id="endereco" placeholder="ex. Benfica" required>
-          </div>
-          <div class="input-box">
-            <label for="nacionalidade">Nacionalidade</label>
-            <input type="text" name="nacionalidade" id="nacionalidade" placeholder="ex. Angolana" required>
-          </div>
+        </div>
 
-          <div class="input-box">
-            <label for="senha">Senha</label>
-            <input type="password" name="senha" id="senha" placeholder="Senha" required>
-          </div>
+        <div class="input-box">
+          <label for="dataNasc">Data de nascimento</label>
+          <input type="date" name="dataNasc" id="dataNasc" required>
+        </div>
 
-          <div class="input-box">
-            <label for="Conf_senha">Confirmar senha</label>
-            <input type="password" name="conf_senha" id="conf_senha" placeholder="Confirmar senha" required>
+        <div class="input-box">
+          <label for="telefone">Telefone</label>
+          <input type="number" name="telefone" id="telefone" placeholder="ex. +244 xxx xxx xxx" required>
+        </div>
+        <div class="input-box">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="ex. arieldelgado@gmail.com" required>
+        </div>
+        <div class="input-box">
+          <label for="local">Endereço</label>
+          <input type="text" name="endereco" id="endereco" placeholder="ex. Benfica" required>
+        </div>
+        <div class="input-box">
+          <label for="nacionalidade">Nacionalidade</label>
+          <input type="text" name="nacionalidade" id="nacionalidade" placeholder="ex. Angolana" required>
+        </div>
+
+        <div class="input-box">
+          <label for="senha">Senha</label>
+          <input type="password" name="senha" id="senha" placeholder="Senha" required>
+        </div>
+
+        <div class="input-box">
+          <label for="Conf_senha">Confirmar senha</label>
+          <input type="password" name="conf_senha" id="conf_senha" placeholder="Confirmar senha" required>
+        </div>
+      </div>
+
+      <div class="genero_grup">
+
+        <div class="title">
+          <h6>Gênero</h6>
+        </div>
+
+        <div class="genders">
+          <div class="gender-input">
+            <input type="radio" id="male" name="gender" required>
+            <label for="male">Masculino</label>
+          </div>
+          <div class="gender-input">
+            <input type="radio" id="female" name="gender" required>
+            <label for="female">Femenino</label>
           </div>
         </div>
 
-        <div class="genero_grup">
+      </div>
+      <input class="input-button" id="cadastro_btn" name="submit" type="submit" value="Cadastre-se">
+    </form>
 
-          <div class="title">
-            <h6>Gênero</h6>
-          </div>
-
-          <div class="genders">
-            <div class="gender-input">
-              <input type="radio" id="male" name="gender" required>
-              <label for="male">Masculino</label>
-            </div>
-            <div class="gender-input">
-              <input type="radio" id="female" name="gender" required>
-              <label for="female">Femenino</label>
-            </div>
-          </div>
-          
-        </div>
-        <input class="input-button" id="cadastro_btn" name="submit" type="submit" value="Cadastre-se">
-      </form>
-    
   </div>
-
-  <script src="../js/validations.js"></script>
 </body>
+
 </html>

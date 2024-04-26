@@ -90,3 +90,17 @@ svg{
   max-width: 100%;
   display: block;
 }
+
+// Componentes 
+#botao{
+  border: none;
+  color:#fff;
+  cursor: pointer;
+  margin-top: 1rem;
+  background: hsl(216, 100%, 50%);
+  text-align: center;
+}
+
+#botao:hover{
+  background: hsl(216, 100%, 60%);
+}
