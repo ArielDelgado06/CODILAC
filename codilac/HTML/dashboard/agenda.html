@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,300&display=swap"
+    rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Agendar consulta</title>
+  <link rel="stylesheet" href="../../CSS/marcacao.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="navigation">
+      <ul>
+        <li><a href="#">
+            <span class="icon"><ion-icon name="logo-tux"></ion-icon></span>
+            <span id="mainTitle" class="title">CODILAC</span>
+          </a></li>
+
+        <li><a href="home.html">
+            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+            <span class="title">Home</span>
+          </a></li>
+
+        <li><a href="perfil.html">
+            <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
+            <span class="title">Meu perfil</span>
+          </a></li>
+
+        <li><a href="agendar.html">
+            <span class="icon"><ion-icon name="create-outline"></ion-icon></span>
+            <span class="title">Agendar Consulta</span>
+          </a></li>
+
+        <li><a href="agenda.html">
+            <span class="icon"><ion-icon name="calendar-number-outline"></ion-icon></span>
+            <span class="title">Agenda</span>
+          </a></li>
+
+        <li><a href="historico.html">
+            <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+            <span class="title">Histórico</span>
+          </a></li>
+
+
+        <li><a id="link-sair">
+            <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+            <span class="title">Sair</span>
+          </a></li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <div class="topbar">
+        <div class="toggle">
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
+      </div>
+
+      <div class="main_box">
+
+        <div class="mainwrap">
+          <h1>Agenda</h1>
+        </div>
+
+        <div class="card">
+          <div class="cardAgenda">
+            <div class="result" id="one">
+              <P>confirmado</P>
+              <p>26/03/2024 às 08:30</p>
+            </div>
+
+            <section>
+              <h3>Dentista</h3>
+              <p>Dr. Fábio Mendes</p>
+              <p>Paciente: Gelson João</p>
+            </section>
+
+            <div class="btnDiv">
+              <button>Remarcar</button>
+              <button id="btnred">Desmarcar</button>
+            </div>
+          </div>
+
+          <div class="cardAgenda">
+            <div class="result" id="two">
+              <P>pendente</P>
+              <p>16/03/2024 às 09:10</p>
+            </div>
+
+            <section>
+              <h3>Dentista</h3>
+              <p>Dr. Gonçalves Neves</p>
+              <p>Paciente: Dariela Vale</p>
+            </section>
+
+            <div class="btnDiv">
+              <button>Remarcar</button>
+              <button id="btnred">Desmarcar</button>
+            </div>
+          </div>
+
+          <div class="cardAgenda">
+            <div class="result" id="thre">
+              <P>cancelado</P>
+              <p>06/03/2024 às 10:30</p>
+            </div>
+
+            <section>
+              <h3>Dentista</h3>
+              <p>Dra. Rosa Gaspar</p>
+              <p>Paciente: Osvaldo De Almeida</p>
+            </section>
+
+            <div class="btnDiv">
+              <button>Remarcar</button>
+              <button id="btnred">Desmarcar</button>
+            </div>
+          </div>
+
+          <div class="cardAgenda">
+            <div class="result" id="for">
+              <P>confirmado</P>
+              <p>20/03/2024 às 14:00</p>
+            </div>
+
+            <section>
+              <h3>Dentista</h3>
+              <p>Dra. Maria Antónia</p>
+              <p>Paciente: Celson Pires</p>
+            </section>
+
+            <div class="btnDiv">
+              <button>Remarcar</button>
+              <button id="btnred">Desmarcar</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/redirect.js"></script>
+</body>
+
+</html>
