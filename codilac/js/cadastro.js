@@ -23,13 +23,12 @@ const isload  = ()=>{
 
 
 
-async function handleCadastro(nome,sobreNome,data,telefone,email,endereco,sexo){
+async function handleCadastro(nome,sobreNome,data,telefone,email,endereco,sexo,nacionalidade){
 
 
 try{
-
-    const paciente = {'nome':nome,'sobreNome':sobreNome, 'data_nasc':data, 'sexo':sexo,'telefone':telefone, 'email':email, 'endereco':endereco}
-
+    isload()
+    const paciente = {'nome':nome,'sobreNome':sobreNome, 'data_nasc':data, 'sexo':sexo,'nacionalidade':nacionalidade,'telefone':telefone, 'email':email, 'endereco':endereco}
     await fetch('http://localhost:3333/cadastro/paciente',{
         method:"POST",
         body:JSON.stringify(paciente),
@@ -128,7 +127,7 @@ form.addEventListener('submit',async (e)=>{
 
    if(nome != '' && sobreNome != '' && data != '' &&  telefone != '' && email != '' && endereco !='' && sexo !=''){
 
-        await handleCadastro(nome,sobreNome,data,telefone,email,endereco,sexo)
+        await handleCadastro(nome,sobreNome,data,telefone,email,endereco,sexo,nacionalidade)
    }
 
     console.log(nome)
