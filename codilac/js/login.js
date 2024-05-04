@@ -28,9 +28,6 @@ async function handleLogin(nome, senha) {
       alert(data?.mensagem)
       return
     }
-
-    localStorage.setItem('id', data.id)
-    window.location.href = "../dashboard/home.html"
   } catch (error) {
     console.log(error)
   } finally {
