@@ -91,12 +91,12 @@ svg{
   display: block;
 }
 
-// Componentes 
+/*Componentes*/ 
 
-// Button
+/*   botão  */
 #botao{
   border: none;
-  color:#fff;
+  color: #fff;
   cursor: pointer;
   margin-top: 1rem;
   background: hsl(216, 100%, 50%);

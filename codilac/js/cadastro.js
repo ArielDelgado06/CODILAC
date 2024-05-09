@@ -23,7 +23,7 @@ const isload  = ()=>{
 
 
 
-async function handleCadastro(nome,sobreNome,data,telefone,email,endereco,sexo,nacionalidade){
+async function handleCadastro(nome,sobreNome,data,telefone,email,endereco,sexo,nacionalidade,senha){
 
 
 try{
@@ -34,13 +34,14 @@ try{
         body:JSON.stringify(paciente),
         headers:{"Content-Type":"application/json;charset=UTF-8"}
     }).then(
-        console.log("conectou!")
+        console.log("conectou, com a rota do paiente"),
+      
     )
 
 
 
 }catch(error){
-    console.log('falho!', error)
+    console.log('falha ao se conectar com a rota do paciente', error)
 }finally{
 
     isload()
@@ -48,11 +49,38 @@ try{
 }
 
 
+try{
 
+    const user = {'senha':senha}
+    await fetch('http://localhost:3333/cadastro/usuario',{
+        method:"POST",
+        body:JSON.stringify(user),
+        headers:{"Content-Type":"application/json;charset=UTF-8"}
+    }).then(
+        console.log("conectou! com a rota do user")
+    )
+
+}catch(err){
+    console.log('falha ao se conectar com a rota do user', err)
+}
 
 
 }
+const limparCampos = () =>{
 
+    nomeInput.value = ""
+    sobreNomeInput.value = ""
+    dataNascInput.value = ""
+    teleInput.value = ""
+    emailInput.value = ""
+    enderecoInput.value = ""
+    nacionalidadeInput.value = ""
+    senhaInput.value = ""
+    confSenhaInput.value = ""
+    sexoInput.value = ""
+    
+    }
+    
 
 
 form.addEventListener('submit',async (e)=>{
@@ -127,7 +155,8 @@ form.addEventListener('submit',async (e)=>{
 
    if(nome != '' && sobreNome != '' && data != '' &&  telefone != '' && email != '' && endereco !='' && sexo !=''){
 
-        await handleCadastro(nome,sobreNome,data,telefone,email,endereco,sexo,nacionalidade)
+        await handleCadastro(nome,sobreNome,data,telefone,email,endereco,sexo,nacionalidade,senha)
+        setTimeout(limparCampos(),5000)
    }
 
     console.log(nome)
