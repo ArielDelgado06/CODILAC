@@ -1,7 +1,7 @@
-const form = document.querySelector(".form_content");
-const nomeInput = form.elements['nome']
+const form = document.querySelector(".form_login_formulario");
+const emailInput = form.elements['email']
 const senhaInput = form.elements['senha']
-const buttonSubmit = document.querySelector("button[value=entrar]")
+const buttonSubmit = document.querySelector("#form_login_botao[value=entrar]");
 let load = true
 
 function isLoad() {
@@ -9,15 +9,14 @@ function isLoad() {
   load = !load
 }
 
-async function handleLogin(nome, senha) {
-  console.log('clicou')
+async function handleLogin(email, senha) {
   try {
     isLoad()
     const response = await fetch('http://localhost:3333/login', {
       method: "POST",
       headers: { "Content-type": "application/json;charset=UTF-8" },
       body: JSON.stringify({
-        nome,
+        email,
         senha
       })
     })
@@ -29,8 +28,10 @@ async function handleLogin(nome, senha) {
       return
     }
 
-    localStorage.setItem('id', data.id)
-    window.location.href = "../dashboard/home.html"
+    localStorage.setItem('id', data?.id)
+    localStorage.setItem('cargo', data?.cargo)
+    window.location.href = './index.html'
+
   } catch (error) {
     console.log(error)
   } finally {
@@ -42,11 +43,11 @@ async function handleLogin(nome, senha) {
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault()
-  const nome = nomeInput.value
+  const email = emailInput.value
   const senha = senhaInput.value
 
-  if (nome === '') {
-    alert('Campo nome vazio. Por favor preencha o nome!')
+  if (email === '') {
+    alert('Campo email vazio. Por favor preencha o email!')
     return
   }
 
@@ -55,9 +56,9 @@ form.addEventListener('submit', async (event) => {
     return
   }
 
-  if (nome && senha) {
-    await handleLogin(nome, senha)
-    return
+  if (email && senha) {
+    const usuario = await handleLogin(email, senha)
+    console.log(usuario)
   }
 
 })

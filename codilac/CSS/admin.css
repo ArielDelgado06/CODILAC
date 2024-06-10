@@ -1,79 +1,102 @@
-*{
-  margin: 0;
-  top: 0;
-  box-sizing: border-box;
-}
+@import url("../CSS/dashboard.css");
 
-
-
-.information_card{
-  width: 100%;
+.information_card {
+  width: 95%;
   height: auto;
   display: flex;
-  flex-direction: row;
-  padding: 0.5rem;
-  gap: 1em;
+  gap: 32px;
+  margin-bottom: 24px;
 }
 
-#informations_cards{
-  width: 40rem;
-  height: 5.5rem;
+.informations_cards {
+  position: relative;
+  width: 100%;
+  padding: 8px 24px;
+
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+}
+
+.title_icon {
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
-  border-radius: 4px;
-  border: 1px solid hsl(216, 100%, 50%);
-  border-radius: 8px;
-}
-
-.title_icon{
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  color: hsl(216, 100%, 40%);
+  color: #334155;
 }
 
-.title_icon span{
-  font-size:2.1rem ;
+.title_icon h3 {
+  font-weight: 500;
+  font-size: 16px;
+
 }
 
-.box_main{
-  width: 100%;
+.title_icon .stastic {
+  font-size: 32px;
+}
+
+.informations_cards>span {
+  position: absolute;
+  right: 18px;
+  top: 30%;
+  font-size: 32px;
+  font-weight: 300;
+  color: #334155;
+}
+
+.pacientesWrapper {
   height: auto;
-  padding: 1em;
+  margin-top: 30px;
 }
 
-.box_main h2{
-  margin-top: 1em;
-  margin-bottom:1.5em;
-  margin-left: 2em;
-}
-
-.box_main .box{
-  width: 100%;
+.pacientesWrapper>.header-table{
   display: flex;
-  flex-direction: row;
   align-items: center;
+  margin-bottom: 24px;
+  gap: 36rem;
+}
+
+.pacientesWrapper>.header-table h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.pacientesWrapper>table {
+  width: 100%;
+  position: relative;
+  
+}
+
+.pacientesWrapper table>thead {
+  border-radius: 8px;
+  border: none;
+
+  margin-bottom: 50px;
+
+}
+
+.pacientesWrapper table thead>tr {
   justify-content: space-between;
-  gap: 0.5rem;
-}
-.box_main .box .today_pacientes{
-  width: 70%;
-  border: 1px solid #fff;
-  border-radius: 10px;
-  display: grid;
-  min-height: 400px;
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+  color: #334155;
 }
 
-.box_main .box .grafic{
-  width: 30%;
-  border: 1px solid #fff;
-  border-radius: 10px;
-  min-height: 400px;
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+.pacientesWrapper table tbody>tr td {
+  font-size: 16px;
 }
 
+.pacientesWrapper table tbody>tr td button {
+  padding: 4px 10px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+
+  color: #fff;
+}

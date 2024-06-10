@@ -1,50 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
+  position: relative;
   background: hsl(216, 100%, 60%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-content: center;
+  place-items: center;
   width: 100%;
   height: 100vh;
 }
 
-.container{
+.container {
   width: 90%;
-  height: 0 auto;
+  height: 100vh;
   display: flex;
-  flex-direction: row;
-  box-shadow: 5px 5px 10px rgb(0, 0, 0,0.212);
+  box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.212);
   border-radius: 4px;
 }
 
-.img{
+.img {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.img img{
-  width:400px;
-  height:100%;
-}
-
-.img_content{
+.img_content {
   position: absolute;
   width: 300px;
   height: 300px;
   background: transparent;
   top: 130px;
   border-radius: 4px;
-  box-shadow: 15px 15px 20px rgb(0, 0, 0,0.212);
+  box-shadow: 15px 15px 20px rgb(0, 0, 0, 0.212);
   padding: 30px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -52,11 +47,11 @@ body{
   background: rgba(34, 33, 33, 0.3);
 }
 
-.img_content p{
+.img_content p {
   margin-top: 1rem;
 }
 
-.content{
+.content {
   width: 70%;
   height: auto;
   display: flex;
@@ -67,7 +62,7 @@ body{
   padding: 3rem;
 }
 
-.header{
+.header {
   width: 100%;
   margin-bottom: 3rem;
   display: flex;
@@ -76,13 +71,13 @@ body{
   padding: 1rem;
 }
 
-.header a{
+.header a {
   text-decoration: none;
   color: hsl(216, 100%, 50%);
   font-size: 1rem;
 }
 
-.header h1::after{
+.header h1::after {
   content: "";
   display: block;
   width: 5rem;
@@ -93,20 +88,20 @@ body{
   border-radius: 10px;
 }
 
-.input_grup{
+.input_grup {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 1rem 0;
 }
 
-.input-box{
-  display:flex;
+.input-box {
+  display: flex;
   flex-direction: column;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1rem;
 }
 
-.input-box input{
+.input-box input {
   width: 12rem;
   height: 2.3rem;
   font-weight: 500;
@@ -121,14 +116,14 @@ body{
 
 
 .input-box label,
-.title h6{
-  font-size:1rem ;
+.title h6 {
+  font-size: 1rem;
   font-weight: 600;
   color: #000000c0;
   margin-bottom: 1rem;
 }
 
-.genero_grup{
+.genero_grup {
   display: flex;
   flex-direction: column;
   margin-top: 0.50rem;
@@ -136,23 +131,22 @@ body{
   margin-right: 25rem;
 }
 
-.genders{
+.genders {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
-.gender-input label{
-  font-size:1rem;
+.gender-input label {
+  font-size: 1rem;
   font-weight: 600;
   color: #000000c0;
 }
 
-.input-button{
-  position: relative;
+.input-button {
   width: 50%;
   padding: 8px;
-  margin-top: 2.5rem;
+  margin-top: 2.1rem;
   border: none;
   background: hsl(216, 100%, 50%);
   color: #fff;
@@ -161,11 +155,121 @@ body{
   border-radius: 4px;
 }
 
-.input-button:hover{
+.input-button:hover {
   background: hsl(216, 100%, 60%);
 }
 
 /* estilo dos elementos do javascript */
-.error{
+.error {
   border: 1px solid red;
+}
+
+/* estilo de media queries */
+
+@media (max-width:425px) {
+  .img img {
+    display: none;
+  }
+
+  .img_content {
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .content {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+@media (max-width:768px) {
+  .img img {
+    display: none;
+  }
+
+  .img_content {
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .content {
+    width: 100%;
+    height: auto;
+  }
+
+  .header {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .input-button {
+    width: 50%;
+    padding: 8px;
+    margin-top: 1rem;
+  }
+
+  .genero_grup {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input_grup {
+    padding: 0rem 0;
+
+  }
+}
+
+@media (max-width:1024px) {
+
+  body {
+    background: #fff;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    box-shadow: none;
+  }
+
+  .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .header {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .genero_grup {
+    display: flex;
+    flex-direction: column;
+    border: 4px solid red;
+  }
+  .input-button {
+    width: 50%;
+    padding: 8px;
+    margin-top: 1rem;
+  }
+
+  .genero_grup {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input_grup {
+    padding: 0rem 0;
+
+  }
 }

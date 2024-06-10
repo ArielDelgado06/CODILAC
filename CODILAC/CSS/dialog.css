@@ -1,0 +1,299 @@
+
+#service-dialog {
+  font-size: 62.5%;
+  --primary: #001F3F;
+  --text: #252728;
+  --headline: #1a1e1f;
+  --gray-text: #6d7679;
+  --white: #fff;
+  --bacground: #f8f8ff;
+  --gray-dark: #9ba2a4;
+  --gray-light: #f3f3f4;
+  position: relative;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Lato", sans-serif;
+  user-select: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+  max-width: 31rem;
+  margin: 0 auto;
+  width: 100%;
+  align-self: center;
+  background-color: var(--white);
+  border: 0.1rem solid #ced4da;
+  animation: fadeInAnimation 0.5s ease-in-out forwards;
+}
+
+form {
+  font-size: 92.5%;
+  --primary: #001F3F;
+  --text: #252728;
+  --headline: #1a1e1f;
+  --gray-text: #6d7679;
+  --white: #fff;
+  --bacground: #f8f8ff;
+  --gray-dark: #9ba2a4;
+  --gray-light: #f3f3f4;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Lato", sans-serif;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 4rem;
+  padding: 1.5rem 2rem 0.75rem 2rem;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+header {
+  font-size: 62.5%;
+  --primary: #001F3F;
+  --text: #252728;
+  --headline: #1a1e1f;
+  --gray-text: #6d7679;
+  --white: #fff;
+  --bacground: #f8f8ff;
+  --gray-dark: #9ba2a4;
+  --gray-light: #f3f3f4;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Lato", sans-serif;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  min-height: 4rem;
+  padding: 1.5rem 2rem 0.75rem 2rem;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.form-header {
+  font-size: 1rem;
+  --primary: #001F3F;
+  --text: #252728;
+  --headline: #1a1e1f;
+  --gray-text: #6d7679;
+  --white: #fff;
+  --bacground: #f8f8ff;
+  --gray-dark: #9ba2a4;
+  --gray-light: #f3f3f4;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Lato", sans-serif;
+  user-select: none;
+}
+
+#close-service {
+  --primary: #001F3F;
+  --text: #252728;
+  --headline: #1a1e1f;
+  --gray-text: #6d7679;
+  --white: #fff;
+  --bacground: #f8f8ff;
+  --gray-dark: #9ba2a4;
+  --gray-light: #f3f3f4;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Lato", sans-serif;
+  user-select: none;
+  background-color: inherit;
+  cursor: pointer;
+  border: none;
+  align-self: flex-start;
+}
+
+.course-dialog__content {
+  font-size: 62.5%;
+  --primary: #001F3F;
+  --text: #252728;
+  --headline: #1a1e1f;
+  --gray-text: #6d7679;
+  --white: #fff;
+  --bacground: #f8f8ff;
+  --gray-dark: #9ba2a4;
+  --gray-light: #f3f3f4;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Lato", sans-serif;
+  user-select: none;
+  padding: 2rem;
+}
+
+
+.course-dialog-wrapper {
+  font-size: 62.5%;
+  --primary: #001F3F;
+  --text: #252728;
+  --headline: #1a1e1f;
+  --gray-text: #6d7679;
+  --white: #fff;
+  --bacground: #f8f8ff;
+  --gray-dark: #9ba2a4;
+  --gray-light: #f3f3f4;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Lato", sans-serif;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  color: var(--gray-text);
+  padding: 0.25rem;
+  gap: 1.6rem;
+}
+
+.form-group{
+  font-size: 1.2rem;
+  --primary: #001F3F;
+  --text: #252728;
+  --headline: #1a1e1f;
+  --gray-text: #6d7679;
+  --white: #fff;
+  --bacground: #f8f8ff;
+  --gray-dark: #9ba2a4;
+  --gray-light: #f3f3f4;
+  color: var(--gray-text);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Lato", sans-serif;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.form-group input, select {
+  font-size: 1rem;
+  padding: 4px;
+}
+
+.form-group-button{
+  font-size: 62.5%;
+  --primary: #001F3F;
+  --text: #252728;
+  --headline: #1a1e1f;
+  --gray-text: #6d7679;
+  --white: #fff;
+  --bacground: #f8f8ff;
+  --gray-dark: #9ba2a4;
+  --gray-light: #f3f3f4;
+  color: var(--gray-text);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Lato", sans-serif;
+  user-select: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+  gap: 1.6rem;
+}
+
+#close-services{
+  --primary: #001F3F;
+  --text: #252728;
+  --headline: #1a1e1f;
+  --gray-text: #6d7679;
+  --white: #fff;
+  --bacground: #f8f8ff;
+  --gray-dark: #9ba2a4;
+  --gray-light: #f3f3f4;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Lato", sans-serif;
+  user-select: none;
+  color: var(--gray-text);
+  outline: none;
+  border: none;
+  width: 100%;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background-color: var(--gray-light);
+  border-radius: 0.5rem;
+  padding: 0.8rem 1.6rem;
+  cursor: pointer;
+}
+
+#primary{
+  --primary: #001F3F;
+  --text: #252728;
+  --headline: #1a1e1f;
+  --gray-text: #6d7679;
+  --white: #fff;
+  --bacground: #f8f8ff;
+  --gray-dark: #9ba2a4;
+  --gray-light: #f3f3f4;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Lato", sans-serif;
+  user-select: none;
+  outline: none;
+  border: none;
+  width: 100%;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1.6rem;
+  cursor: pointer;
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.container_especialista h3{
+  font-size: 18px;
+}
+
+.container_especialista input{
+  font-size: 1.2rem;
+}
+
+.horarios_disponiveis {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+.buttonHorarios {
+  width: 10rem;
+  padding: .4rem;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #777;
+  cursor: pointer;
+  border: 1px solid #E2E8F0;
+  background: #fff;
+}
+
+.buttonHorarios-selecionado {
+  width: 10rem;
+  padding: .5rem;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #777;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #E2E8F0;
+  background: #000;
+}
+
+

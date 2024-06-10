@@ -10,44 +10,46 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-  <title>Agendar consulta</title>
-  <link rel="stylesheet" href="../../CSS/marcacao.css">
+  <title>Codilac - home</title>
+  <link rel="stylesheet" href="../../CSS/home.css">
 </head>
 
 <body>
-  <div class="container">
+  <div class="container_dashboard">
     <div class="navigation">
       <ul>
         <li><a href="#">
-            <span class="icon"><ion-icon name="logo-tux"></ion-icon></span>
-            <span id="mainTitle" class="title">CODILAC</span>
+            <span class="logotipo">
+              <img src="../../img/logotipo.png" alt="">
+            </span>
           </a></li>
 
+
         <li><a href="home.html">
-            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+            <span class="icon"><ion-icon name="apps-outline"></ion-icon></span>
             <span class="title">Home</span>
           </a></li>
 
-        <li><a href="#">
-            <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
-            <span class="title">Meu perfil</span>
-          </a></li>
-
-        <li><a href="agendar.html">
-            <span class="icon"><ion-icon name="create-outline"></ion-icon></span>
-            <span class="title">Agendar Consulta <a href="agendar.html"></a></span>
+        <li><a href="perfil.html">
+            <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+            <span class="title">Perfil</span>
           </a></li>
 
         <li><a href="agenda.html">
             <span class="icon"><ion-icon name="calendar-number-outline"></ion-icon></span>
-            <span class="title">Agenda</span>
+            <span class="title">Consultas agendadas</span>
           </a></li>
 
-        <li><a href="historico.html">
-            <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
-            <span class="title">Histórico</span>
+        <li><a href="servicos.html">
+            <span class="icon"><ion-icon name="folder-outline"></ion-icon></span>
+            <span class="title">Serviços</span>
           </a></li>
 
+        <li><a href="#">
+            <span class="icon">
+              <ion-icon name="settings-outline"></ion-icon></span>
+            <span class="title">Configurações</span>
+          </a></li>
 
         <li><a id="link-sair">
             <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
@@ -63,49 +65,132 @@
         </div>
       </div>
 
-      <h1>Olá, <span>Gouveia</span></h1>
-      <div class="cards_banner">
-        <div class="banners" id="oneimg">
-          <h2>Agendar consulta</h2>
-          <button class="btn">Ver agendamentos</button>
-        </div>
-        <div class="banners" id="twoimg">
-          <h2>Agendar exame</h2>
-          <button class="btn">Ver exames</button>
+      <div class="containerElement">
+        <div class="bannerWrapper">
+
+          <div class="headerBanner">
+            <h1 id="pacienteName">Olá, Gouveia</h1>
+            <p>Seja bem-vindo ao seu sistema de marcação de consultas</p>
+          </div>
+
+          <img class="imageBanner" src="../../img/Rectangle 2.png" alt="">
         </div>
       </div>
 
-      <div class="other">
-        <div class="bannerFirst">
-          <h2 id="title">Consultas agendadas</h2>
-          <div class="firstOne">
-            <h2>Consulta cancelada</h2>
-            <p>Sem especialista disponível</p>
-            <button class="btn">Remarcar consulta</button>
+
+      <div class="min_container">
+
+        <div class="container_agenda | card">
+          <h2>Consultas agendadas</h2>
+
+          <div class="agendamentoItems">
+            <div class="agendamento-item">
+              <div class="barra"></div>
+              <div class="content">
+                <div class="title">
+                  <span class="data">20/03</span>
+                  <h4>Lavagem dos dentes</h4>
+                </div>
+                <button class="button-ghost">Remarcar</button>
+              </div>
+            </div>
+
+            <div class="agendamento-item">
+              <div class="barra"></div>
+              <div class="content">
+                <div class="title">
+                  <span class="data">20/03</span>
+                  <h4>Lavagem dos dentes</h4>
+                </div>
+                <button class="button-ghost">Remarcar</button>
+              </div>
+            </div>
           </div>
 
-          <div class="firstOne">
-            <h2>Consulta Realizada</h2>
-            <p>higiene bucal</p>
-          </div>
-
-          <div class="firstOne">
-            <h2>Consulta cancelada</h2>
-            <p>Médico indisponível</p>
-          </div>
+          <footer id="botao-ver-mais">
+            <span class="icon"><ion-icon name="arrow-back-outline"></ion-icon></span>
+            <span>ver mais</span>
+          </footer>
         </div>
-        <div class="bannerSecond">
-          <div class="bannerOne">
-            <h2>Receituário</h2>
-            <button class="btnBannerOne">Ver Receituário</button>
-          </div>
-          <div class="bannerTwo">
-            <h2>Resultado dos exames</h2>
-          </div>
-        </div>
 
+        <div class="section_consultas">
+          <div class="consultas_etapas">
+            <h2>Consultas por etapas</h2>
+            <div class="etapas_contents">
+              <div class="grafic">
+                <img class="ellipse" src="../../img/Group 1000005717.svg" alt="">
+              </div>
+              <div class="contents">
+                <img class="exames" src="../../img/Group 1000005719.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="especialistasContainer | card">
+            <h2>Os melhores especialistas</h2>
+
+            <div class="especialistaWrapper">
+              <div class="especialistaItem">
+                <img src="../../img/dentista-1.jpg" alt="Rosa Maria">
+                <div class="header">
+                  <strong>Rosa Maria</strong>
+                  <span>Dentista</span>
+                </div>
+                <div class="footer">
+                  <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                  <span>4.5</span>
+                </div>
+              </div>
+
+              <div class="especialistaItem">
+                <img src="../../img/dentista-1.jpg" alt="Rosa Maria">
+                <div class="header">
+                  <strong>Rosa Maria</strong>
+                  <span>Dentista</span>
+                </div>
+                <div class="footer">
+                  <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                  <span>4.5</span>
+                </div>
+              </div>
+
+              <div class="especialistaItem">
+                <img src="../../img/dentista-1.jpg" alt="Rosa Maria">
+                <div class="header">
+                  <strong>Rosa Maria</strong>
+                  <span>Dentista</span>
+                </div>
+                <div class="footer">
+                  <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                  <span>4.5</span>
+                </div>
+              </div>
+
+              <div class="especialistaItem">
+                <img src="../../img/dentista-1.jpg" alt="Rosa Maria">
+                <div class="header">
+                  <strong>Rosa Maria</strong>
+                  <span>Dentista</span>
+                </div>
+                <div class="footer">
+                  <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                  <span>4.5</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
       </div>
     </div>
+
+  </div>
+
+  </div>
+
+  </div>
+  </div>
 
   </div>
 
@@ -114,6 +199,7 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="../../js/redirect.js"></script>
   <script src="../../js/script.js"></script>
+  <script src="../../js/home.js"></script>
 </body>
 
 </html>

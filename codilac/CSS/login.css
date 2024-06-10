@@ -1,16 +1,16 @@
-@import url('./global-style.css');
+@import url("../CSS/global-style.css");
 
-body{
+.divPrincipalDoFormLogin{
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
 }
 
-.container{
-  position:relative;
+.container_form_login{
   width: 60%;
   height: 75vh;
   display: flex;
@@ -19,13 +19,13 @@ body{
   justify-content: center;
 }
 
-.img{
+.form_login_img{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.img img{
+.form_login_img img{
   position: relative;
   width: 400px;
   height: 50%;
@@ -51,7 +51,7 @@ body{
   margin-top: 1rem;
 }
 
-.content{
+.form_login_content{
   width: 22rem;
   height: auto;
   display: flex;
@@ -60,15 +60,17 @@ body{
   justify-content: center;
 }
 
-.content h2{
+.form_login_content h2{
   margin-right: 14rem;
   margin-bottom: 1rem;
   text-transform: capitalize;
   letter-spacing: 1px;
   font-weight: 600;
+  font-size: 1.5rem;
+  color:var(--clr-blue);
 }
 
-.form_content{
+.form_login_formulario{
   position: relative;
   width: 20rem;
   height: 18rem;
@@ -78,7 +80,7 @@ body{
   margin: 8px;
 }
 
-.form_content input{
+.form_login_formulario input{
   position: relative;
   width: 18rem;
   height:2.5rem;
@@ -86,49 +88,51 @@ body{
   font-size: 1rem;
   margin-bottom: 16px;
   outline: none;
-  border: 1px solid hsl(216, 100%, 50%);
+  border: 1px solid var(--clr-blue);
   padding: 12px;
   border-radius: 4px;
 }
 
-.form_content input:focus{
-  border-color: hsl(216, 100%, 40%);
+.form_login_formulario input:focus{
+  border-color: var(--clr-bluedarck);
 }
 
-.form_content input::placeholder{
+.form_login_formulario input::placeholder{
   font-weight: 300;
   font-style: normal;
 }
 
-.form_content label{
+.form_login_formulario label{
   margin-bottom: 0.4rem;
   font-weight: 500;
 }
 
-.form_content p a{
+.form_login_formulario p a{
   text-decoration: none;
-  margin-left: 7.4rem;
+  margin-left: 7.3rem;
   font-size: 1rem;
 }
 
-.form_content a{
+.form_login_formulario a{
   text-decoration: none;
   font-size: 1rem;
   cursor: pointer;
-  color: hsl(216, 100%, 50%);
+  color: var(--clr-blue);
 
 }
 
- #botao{
+ #form_login_botao{
+  width: 18rem;
   border: none;
   color:#fff;
   cursor: pointer;
-  margin-top: 1rem;
-  background: hsl(216, 100%, 50%);
+  margin: 1rem 0;
+  background: var(--clr-blue);
   text-align: center;
+  padding: .4rem;
+  border-radius: 4px;
 }
 
-#botao:hover{
-  background: hsl(216, 100%, 60%);
+#form_login_botao:hover{
+  background: var(--clr-blueliht);
 }
-

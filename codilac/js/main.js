@@ -62,7 +62,3 @@ carrossel.addEventListener("mousemove", dragging);
 carrossel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
-
-// t.style.color="red";
-
-

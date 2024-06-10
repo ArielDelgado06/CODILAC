@@ -7,3 +7,16 @@
     }
   }, 500)
 })()
+
+
+const link = document.getElementById("link-sair");
+
+function logout() {
+  localStorage.removeItem('id')
+  localStorage.removeItem('cargo')
+  window.location.replace('../site/index.html')
+}
+
+link.addEventListener('click', () => {
+  logout()
+})
