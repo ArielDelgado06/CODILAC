@@ -1,0 +1,227 @@
+@import url('../CSS/encontrarDentista.css');
+@import url('../CSS/dashboard.css');
+
+
+/* estilo do calendario */
+
+h3 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.calendar {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 4rem;
+  width: 98%;
+  max-width: 380px;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.calendar header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calendar nav {
+  display: flex;
+  align-items: center;
+}
+
+.calendar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.calendar ul li {
+  width: calc(100% / 7);
+  margin-top: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+#prev,
+#next {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+#prev::before,
+#next::before {
+  content: "";
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  border-color: #ccc;
+}
+
+#next::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#prev::before {
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+#prev:hover::before,
+#next:hover::before {
+  border-color: var(--clr-blueliht);
+}
+
+.days {
+  font-weight: 600;
+}
+
+.dates li.today {
+  color: #fff;
+}
+
+.dates li.today::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--clr-blue);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.dates li.inactive {
+  color: #ccc;
+}
+
+/**/
+
+.contentContainer {
+  width: 100%;
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+
+}
+
+.content-reverse {
+  width: 35rem;
+  margin-left: 0;
+  margin-block: 12px;
+  cursor: auto;
+
+  background: none;
+  border: 1px solid #60A5FA;
+}
+
+/* estilo horarios_disponiveis */
+
+.calendarNew {
+  width: 300px;
+  height: 72px;
+  padding: 10px;
+
+  border-radius: 6px;
+  border: 1px solid #E2E8F0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  outline: none;
+}
+
+/* Estilização do horarios*/
+
+.horarios_disponiveis {
+  width: 750px;
+  margin: 4.5rem auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem 1rem;
+}
+
+
+.buttonHorarios {
+  width: 10rem;
+  padding: .5rem;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #777;
+  cursor: pointer;
+  border: 1px solid #E2E8F0;
+  background: #fff;
+}
+
+.buttonHorarios-selecionado {
+  width: 10rem;
+  padding: .5rem;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #777;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #E2E8F0;
+  background: var(--clr-blueliht);
+}
+
+.buttonHorarios:hover {
+  background-color: var(--clr-blueliht);
+  border: none;
+  color: #fff;
+}
+
+.button_agendar {
+  width: 14rem;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  background: var(--clr-blue);
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 3rem;
+}
+
+.content .img_content img {
+  width: 14rem;
+  height: 12rem;
+  border-radius: 8px;
+}
+
+.content .content_text h3 {
+  font-size: 2rem;
+}
+
+.content .content_text p {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  color: var(--clr-blue);
+}

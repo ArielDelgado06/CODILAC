@@ -1,0 +1,139 @@
+@import url('../CSS/dashboard.css');
+
+
+
+.dentistasContainer {
+  width: 100%;
+  margin-left: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.dentistasContainer>h5 {
+  margin-left: 3rem;
+}
+
+.dentistasContainer>h3 {
+  margin-top: 1.5rem;
+  margin-left: 3rem;
+
+  color: #1E293B;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.dentistasContainer>.searchWrapper {
+  width: 400px;
+  align-self: center;
+
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 1rem;
+  border: 1px solid #E2E8F0;
+
+
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dentistasContainer .searchWrapper>label {
+  text-align: center;
+  font-size: 1.75rem;
+  line-height: 1rem;
+  padding: 0.25rem;
+  color: #1E293B;
+}
+
+.dentistasContainer .searchWrapper>input {
+  border: none;
+  outline: none;
+  color: #1E293B;
+}
+
+.main_content_dentista {
+  width: 100%;
+  max-width: 960px;
+  margin-left: 3rem;
+  padding-block: 3rem;
+  padding-inline-end: 3rem;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem 2rem;
+}
+
+.content_dentista {
+  width: 300px;
+  background: #fff;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  padding: 1.25rem 1rem;
+  margin-left: 2.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5rem;
+  align-items: flex-start;
+  gap: 1.5rem;
+  border: 1px solid #E2E8F0;
+
+  color: #1E293B;
+}
+
+
+
+
+.content_dentista h3 {
+  margin-top: 1rem;
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 1.5rem;
+
+
+}
+
+.content_dentista p {
+  margin-top: 1rem;
+  margin-bottom: 4px;
+  font-size: 1.25rem;
+}
+
+h5 {
+  margin-right: 4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px;
+  font-weight: 600;
+  width: 6rem;
+}
+
+#title_esp {
+  margin-left: 4rem;
+  margin-bottom: 1rem;
+  font-size: 20px;
+}
+
+.icon_back {
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+h5:hover {
+  color: var(--clr-blueliht);
+}
+
+.icon_back:hover {
+  color: var(--clr-blueliht);
+}
+
+.content_dentista img {
+  width: 90px;
+  height: 96px;
+
+  border-radius: 4px;
+}

@@ -10,12 +10,7 @@
   font-size: 1.1rem;
 }
 
-<<<<<<< HEAD
 .container_form_login{
-=======
-.container{
-  position:relative;
->>>>>>> 75ab454cbec86231d45a1c32ef87c610a3357a8b
   width: 60%;
   height: 75vh;
   display: flex;
@@ -24,21 +19,13 @@
   justify-content: center;
 }
 
-<<<<<<< HEAD
 .form_login_img{
-=======
-.img{
->>>>>>> 75ab454cbec86231d45a1c32ef87c610a3357a8b
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-<<<<<<< HEAD
 .form_login_img img{
-=======
-.img img{
->>>>>>> 75ab454cbec86231d45a1c32ef87c610a3357a8b
   position: relative;
   width: 400px;
   height: 50%;
