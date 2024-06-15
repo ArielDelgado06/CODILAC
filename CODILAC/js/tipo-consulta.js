@@ -53,14 +53,14 @@ async function handleCadastroEAtualizar(
         body: JSON.stringify(dentista),
         headers: { "Content-Type": "application/json;charset=UTF-8" }
       })
-      alert('Dentista editado com sucesso')
+      alert('Consulta editada com sucesso')
     } else {
       await fetch('http://localhost:3333/tiposConsulta', {
         method: "POST",
         body: JSON.stringify(dentista),
         headers: { "Content-Type": "application/json;charset=UTF-8" }
       })
-      alert('Dentista cadastrado com sucesso')
+      alert('Consulta cadastrada com sucesso')
     }
     getDentistasByFiltro(search, page)
   } catch (error) {

@@ -138,7 +138,7 @@ buttonAgendar.addEventListener('click', async (e) => {
       body: JSON.stringify(consulta),
       headers: { "Content-Type": "application/json;charset=UTF-8" }
     })
-    alert('Consulta editado com sucesso')
+    alert('Consulta agendada com sucesso')
     window.location.href = "./agenda.html"
   } catch (error) {
     console.log(error)
