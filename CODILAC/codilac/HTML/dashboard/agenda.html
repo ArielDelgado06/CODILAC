@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,300&display=swap"
+    rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Codilac-agenda</title>
+  <link rel="stylesheet" href="../../CSS/marcacao.css">
+  <link rel="stylesheet" href="../../CSS/dialog.css">
+</head>
+
+<body>
+  <div class="container_dashboard">
+    <div class="navigation">
+      <ul>
+        <li><a href="#">
+            <span class="logotipo">
+              <img src="../../img/logotipo.png" alt="">
+            </span>
+          </a></li>
+
+
+        <li><a href="home.html">
+            <span class="icon"><ion-icon name="apps-outline"></ion-icon></span>
+            <span class="title">Home</span>
+          </a></li>
+
+        <li><a href="perfil.html">
+            <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+            <span class="title">Perfil</span>
+          </a></li>
+
+        <li><a href="agenda.html">
+            <span class="icon"><ion-icon name="calendar-number-outline"></ion-icon></span>
+            <span class="title">Consultas agendadas</span>
+          </a></li>
+
+        <li><a href="servicos.html">
+            <span class="icon"><ion-icon name="folder-outline"></ion-icon></span>
+            <span class="title">Serviços</span>
+          </a></li>
+
+        <li><a href="#">
+            <span class="icon">
+              <ion-icon name="settings-outline"></ion-icon></span>
+            <span class="title">Configurações</span>
+          </a></li>
+
+        <li><a id="link-sair">
+            <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+            <span class="title">Sair</span>
+          </a></li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <div class="topbar">
+        <div class="toggle">
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
+      </div>
+
+      <div class="main_box">
+        <h2>Agendamentos</h2>
+        <div class="cardWrapper">
+          <div class="agendamento-item">
+            <div class="barra"></div>
+            <div class="content">
+              <div class="title">
+                <span class="data">20/03</span>
+                <h4>Lavagem dos dentes</h4>
+              </div>
+              <div class="btn">
+                <button 
+                  id="hendleDialog" 
+                  class="button-ghost">
+                  Remarcar
+                </button>
+                <button 
+                  class="button-ghost">
+                  Desmarcar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="agendamento-item">
+            <div class="barra"></div>
+            <div class="content">
+              <div class="title">
+                <span class="data">20/03</span>
+                <h4>Lavagem dos dentes</h4>
+              </div>
+              <div class="btn">
+                <button 
+                  id="hendleDialog" 
+                  class="button-ghost">
+                  Remarcar
+                </button>
+
+                <button 
+                  class="button-ghost">
+                  Desmarcar
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <dialog class="course-dialog" id="service-dialog">
+        <form action="" method="POST" onsubmit="enviarSolicitacao(event)" id="myForm">
+          <header>
+            <div class="form-header">
+              <h2 class="form-header-title">Serviços</h2>
+              <p>Escolha o serviço que pretendes solicitar, preenchendo os campos abaixo 👇🏽</p>
+            </div>
+            <button id="close-service" class="close-btn secundary" type="button">
+              <span onclick="closeModal()" class="material-symbols-outlined">
+                <!-- close -->
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#5f6368">
+                  <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg>
+              </span>
+            </button>
+          </header>
+          <div class="course-dialog__content">
+            <div class="course-dialog-wrapper">
+              <div class="form-group">
+                <label for="request">Esclha um serviço</label>
+                <select data-request="request" name="request" class="form-control" id="request" required="">
+                  <option disabled="" selected="" value="">Serviço</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="service">Escolha um dentista</label>
+                <select data-service="service" name="service" class="form-control" id="service" required="">
+                  <option disabled="" selected="" value="">Encotrar especialista</option>
+                </select>
+              </div>
+    
+              <div class="container_especialista">
+                <h3>Selecione um dia</h3>
+                <input id="calendario" class="calendarNew" type="date">
+    
+                <h3>Horários disponíveis</h3>
+                <div class="horarios_disponiveis">
+    
+                </div>
+    
+              </div>
+    
+              <div class="form-group-button">
+                <button class="btnClose" id="close-services" type="button" onclick="closeModal()">Cancelar</button>
+                <button id="primary" type="submit">Confirmar</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </dialog>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/agenda.js"></script>
+    <script src="../../js/redirect.js"></script>
+</body>
+
+</html>
