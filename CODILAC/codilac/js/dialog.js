@@ -1,7 +1,7 @@
 document.querySelector("#service-dialog")
 
 const btn_dialog = document.querySelector("button");
-const modal = document.querySelector("dialog");
+const modal = document.querySelector(".dialog");
 const close = document.querySelector("#close-service");
 const btnClose = document.querySelector('.btnClose');
 

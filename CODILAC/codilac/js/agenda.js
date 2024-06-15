@@ -1,5 +1,10 @@
 const cardWrapper = document.querySelector('.cardWrapper')
-
+const modal = document.querySelector('.course-dialog')
+const buttonRemarcar = document.querySelector('#remarcar')
+const selectRequest = document.querySelector('#request')
+const selectService = document.querySelector('#service')
+const form = document.querySelector("#myForm")
+const inputData = form.elements['calendario']
 function colorir(status) {
   switch (status) {
     case 'AGENDADA': return 'br-warning color-white';
@@ -76,7 +81,7 @@ async function renderNaTelaASConsultas() {
                 <h4>${consulta.tipo_consulta.tipo_consulta}</h4>
               </div>
               <div class="btn">
-                <button class="button-ghost" >Remarcar</button>
+                <button class="button-ghost" onclick="openModal(${consulta.id})" id="remarcar">Remarcar</button>
                 <button class="button-ghost ${consulta.status !== 'CANCELADA' ? 'bg-error' : 'bg-disable'} color-white" onclick="handleMarcarComoFinalizada(${consulta.id})">cancela</button>
               </div>
             </div>
@@ -90,4 +95,74 @@ async function renderNaTelaASConsultas() {
   }
 }
 
+
+const returnOneConsult = async (id) => {
+
+  try {
+
+    const consult = await fetch(`http://localhost:3333/consulta/${id}`).then((response) => {
+      return response.json()
+    })
+    console.log(consult)
+    inputData.value = consult.data_consulta
+    for (let i = 0; i < selectRequest.length; i++) {
+      if (selectRequest.options[i].text == consult.tipo_consulta.tipo_consulta) {
+        selectRequest.selectedIndex = i
+      }
+      if (selectService.options[i].text == consult.dentista.nome) {
+        selectService.selectedIndex = i
+        return
+      }
+    }
+
+  } catch (error) {
+    window.alert('falha ao se conectar com o servidor', error)
+  }
+
+}
+
+const openModal = (id) => {
+  modal.showModal()
+  const oneConsult = returnOneConsult(id)
+  returnAllConsult(id)
+  returnAllDentista()
+}
+const closeModal = () => {
+  modal.close()
+}
+
+
+const returnAllConsult = async (id) => {
+  let elements = ''
+  const url = `/tiposConsulta/todos`
+  const { data } = await handleConsumoAPI(url)
+  data.forEach((consult) => {
+    elements += `
+
+    <option value=${consult.tipo_consulta}>${consult.tipo_consulta}</option>
+     
+     `
+    return consult.id
+  })
+  selectRequest.innerHTML = elements
+}
+
+const returnAllDentista = async () => {
+  let elements = ''
+  const dentista = await fetch('http://localhost:3333/dentistas/todos').then(response => {
+    return response.json()
+  })
+  dentista.forEach((data) => {
+    elements += `
+     <option value ="${data.nome}">${data.nome}</option>
+    `
+  })
+
+  selectService.innerHTML = elements
+
+}
+
 renderNaTelaASConsultas()
+
+
+

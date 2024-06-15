@@ -33,8 +33,12 @@ async function handleCadastro(nome, sobreNome, data, telefone, email, endereco, 
         })
 
         if (response.status === 200) {
-            alert('Paciente cadastrado com sucesso!')
+            alert('Paciente cadastrado com sucesso! Será redirecionado para tela de login')
             limparCampos()
+            setInterval(() => {
+                // redireciondando o paciente para tela de login
+                window.location.href = "../site/login.html"
+            }, 600)
         } else {
             const { mensagem } = await response.json()
             alert(mensagem)

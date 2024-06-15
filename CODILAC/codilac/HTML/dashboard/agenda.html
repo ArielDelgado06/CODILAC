@@ -77,8 +77,15 @@
                 <h4>Lavagem dos dentes</h4>
               </div>
               <div class="btn">
-                <button id="hendleDialog" class="button-ghost">Remarcar</button>
-                <button class="button-ghost">Desmarcar</button>
+                <button 
+                  id="hendleDialog" 
+                  class="button-ghost">
+                  Remarcar
+                </button>
+                <button 
+                  class="button-ghost">
+                  Desmarcar
+                </button>
               </div>
             </div>
           </div>
@@ -91,8 +98,16 @@
                 <h4>Lavagem dos dentes</h4>
               </div>
               <div class="btn">
-                <button id="hendleDialog" class="button-ghost">Remarcar</button>
-                <button class="button-ghost">Desmarcar</button>
+                <button 
+                  id="hendleDialog" 
+                  class="button-ghost">
+                  Remarcar
+                </button>
+
+                <button 
+                  class="button-ghost">
+                  Desmarcar
+                </button>
               </div>
             </div>
           </div>
@@ -101,7 +116,59 @@
 
       </div>
 
+      <dialog class="course-dialog" id="service-dialog">
+        <form action="" method="POST" onsubmit="enviarSolicitacao(event)" id="myForm">
+          <header>
+            <div class="form-header">
+              <h2 class="form-header-title">Serviços</h2>
+              <p>Escolha o serviço que pretendes solicitar, preenchendo os campos abaixo 👇🏽</p>
+            </div>
+            <button id="close-service" class="close-btn secundary" type="button">
+              <span onclick="closeModal()" class="material-symbols-outlined">
+                <!-- close -->
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#5f6368">
+                  <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg>
+              </span>
+            </button>
+          </header>
+          <div class="course-dialog__content">
+            <div class="course-dialog-wrapper">
+              <div class="form-group">
+                <label for="request">Esclha um serviço</label>
+                <select data-request="request" name="request" class="form-control" id="request" required="">
+                  <option disabled="" selected="" value="">Serviço</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="service">Escolha um dentista</label>
+                <select data-service="service" name="service" class="form-control" id="service" required="">
+                  <option disabled="" selected="" value="">Encotrar especialista</option>
+                </select>
+              </div>
+    
+              <div class="container_especialista">
+                <h3>Selecione um dia</h3>
+                <input id="calendario" class="calendarNew" type="date">
+    
+                <h3>Horários disponíveis</h3>
+                <div class="horarios_disponiveis">
+    
+                </div>
+    
+              </div>
+    
+              <div class="form-group-button">
+                <button class="btnClose" id="close-services" type="button" onclick="closeModal()">Cancelar</button>
+                <button id="primary" type="submit">Confirmar</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </dialog>
     </div>
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="../../js/script.js"></script>
