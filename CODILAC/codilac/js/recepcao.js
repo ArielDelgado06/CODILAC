@@ -15,8 +15,9 @@ const handleRecepcionista = async (nome, email, telefeno, senha, cargo, id) => {
     "nome": nome,
     "email": email,
     "telefone": telefeno,
-    "senha": senha,
-    "cargo": cargo
+    "cargo": cargo,
+    "senha": senha
+    
   }
 
   try {
@@ -42,7 +43,6 @@ const handleRecepcionista = async (nome, email, telefeno, senha, cargo, id) => {
       window.alert('recepcionista cadastrado com sucesso !')
       return response.json()
 
-
     }
 
 
@@ -67,7 +67,14 @@ form.addEventListener('submit', async (e) => {
   console.log(email)
   console.log(cargo)
   console.log(senha)
-  if (nome == '') {
+  const nomevalid = nome.match(/[1-9]/g)
+ console.log(nomevalid)
+  if(nomevalid != null){
+    window.alert('o nome não pode conter números')
+    return
+  }
+
+  if (nomevalid == '') {
     window.alert('preencha o campo nome')
     return
   }
@@ -87,8 +94,7 @@ form.addEventListener('submit', async (e) => {
     return
   }
   if (confSenha != senha) {
-    window.alert('senhas diferente!')
-    return
+    return  window.alert('senhas diferente!')
   }
   const id = window.localStorage.getItem('idRec')
   console.log(id)

@@ -110,8 +110,10 @@ async function renderNomesNaTelaPaciente() {
   const { data: paciente } = await handleConsumoAPI(url)
 
   console.log(paciente)
+  const nome = paciente.nome
+  const sobreNome = paciente.sobreNome
 
-  titulo.innerText = `Olá ${paciente.nome}`
+  titulo.innerText = `Olá ${nome.charAt(0).toUpperCase()+nome.slice(1)} ${sobreNome.charAt(0).toUpperCase() + sobreNome.slice(1)}`
 }
 
 

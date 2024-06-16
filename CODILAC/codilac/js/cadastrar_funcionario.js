@@ -35,11 +35,17 @@ form.addEventListener("submit", async (e) => {
   const email = inputEmail.value;
   const senha = inputSenha.value;
   const confSenha = inputConfSenha.value;
-
+  const nomevalid = nome.match(/[1-9]/g)
   if (nome == "") {
     window.alert("campo nome obrigatório");
     return;
   }
+  if(nomevalid !=null){
+    window.alert('o nome não pode conter números')
+    return
+  }
+
+ 
   if (telefone == "") {
     window.alert("campo telefone obrigatorio");
     return;
