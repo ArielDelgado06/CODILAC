@@ -58,8 +58,32 @@ async function renderNaTelaASConsultas() {
           <span class="data">${consulta.data_consulta}</span>
           <h4>${consulta.tipo_consulta.tipo_consulta}</h4>
         </div>
+
+        <button class="btn-print">
+          <ion-icon name="download-outline"></ion-icon>
+        </button>
+
+        <div class="infoWrapper">
+          <span>
+            <ion-icon class="icon" name="person-outline"></ion-icon>
+            <p>${consulta.dentista.nome}</p>
+          </span>
+          <span>
+            <ion-icon class="icon" name="id-card-outline"></ion-icon>
+            <p>${consulta.especialidade}</p>
+          </span>
+          <span>
+            <ion-icon class="icon" name="pricetag-outline"></ion-icon>
+            <p>${consulta.tipo_consulta.preco}</p>
+          </span>
+          <span>
+            <ion-icon class="icon" name="time-outline"></ion-icon>
+            <p>${consulta.hora_consulta}</p>
+          </span>
+        </div>
+
         ${consulta.status !== 'CANCELADA' ?
-          '<button class="button-ghost">Remarcar</button>'
+          '<button class="button-ghost | btn-remarcar">Remarcar</button>'
           : ''
         }
       </div>
@@ -113,7 +137,7 @@ async function renderNomesNaTelaPaciente() {
   const nome = paciente.nome
   const sobreNome = paciente.sobreNome
 
-  titulo.innerText = `Olá ${nome.charAt(0).toUpperCase()+nome.slice(1)} ${sobreNome.charAt(0).toUpperCase() + sobreNome.slice(1)}`
+  titulo.innerText = `Olá ${nome.charAt(0).toUpperCase() + nome.slice(1)} ${sobreNome.charAt(0).toUpperCase() + sobreNome.slice(1)}`
 }
 
 

@@ -88,7 +88,7 @@ html {
   transform: scale(1.1);
 }
 
-.botoesDaPagPrincipal{
+.botoesDaPagPrincipal, .botaoLogOut{
   display: flex;
   flex-direction: row;
   padding: .4rem;
@@ -99,10 +99,11 @@ html {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 16rem;
+  margin-left: 4rem;
 }
 
-.button-access {
+.button-access,
+.button-logout{
   border: none;
   width: 12rem;
   padding: .60em .7em;
@@ -125,7 +126,8 @@ html {
   gap: 1px;
 }
 
-.button-access:hover {
+.button-access:hover, 
+.button-logout:hover{
   transform: scale(1.1);
 }
 

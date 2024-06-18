@@ -12,9 +12,12 @@
 const link = document.getElementById("link-sair");
 
 function logout() {
-  localStorage.removeItem('id')
-  localStorage.removeItem('cargo')
-  window.location.replace('../site/index.html')
+  const cargo = localStorage.getItem('cargo')
+  if (['admin', 'normal', 'recepcionista'].includes(cargo.toString().toLowerCase())) {
+    window.location.href = "../site/index.html"
+  } else {
+    window.location.href = '../site/index.html'
+  }
 }
 
 link.addEventListener('click', () => {
