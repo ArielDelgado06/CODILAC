@@ -1,0 +1,63 @@
+@import url("admin.css");
+
+
+.information_card{
+  display:flex;
+  flex-direction: row;
+  margin-left: 2rem;
+}
+
+.filter-section {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#filter-form{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filter-section h2{
+  margin-bottom: 2rem;
+}
+
+.button_buscar{
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 16px;
+
+  color: #fff;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: .8;
+}
+
+input {
+  padding: 0.8rem;
+  width: 20rem;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  padding-left: 10px;
+  font-size: 16px;
+
+  outline: none;
+} 
+
+select{
+  font-size: 16px;
+  border: 1px solid #E2E8F0;
+  border-radius: 2px;
+
+  outline: none;
+}

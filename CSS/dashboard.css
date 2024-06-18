@@ -50,7 +50,7 @@ body {
   list-style: none;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
-  margin-bottom: 1rem;
+  margin-bottom: .3rem;
 }
 
 .navigation ul li:hover,
@@ -76,8 +76,8 @@ body {
   margin-left: 16px;
 }
 
-.navigation ul li:nth-child(6) {
-  margin-top: 3rem;
+.navigation ul li:nth-child(8) {
+  margin-top: 2rem;
 }
 
 .navigation ul li a {

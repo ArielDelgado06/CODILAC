@@ -40,8 +40,9 @@
           <li>
             <a href="recepcao.html">
               <span class="icon">
-                <ion-icon name="person-outline">
-                </ion-icon></span>
+              <ion-icon name="person-outline">
+              </ion-icon>
+              </span>
               <span class="title">Cadastrar Recepcionista</span>
             </a>
           </li>
@@ -51,11 +52,15 @@
             <span class="title">Serviços</span>
           </a></li>
 
-        <li><a href="consultas.html">
+          <li><a href="consultas.html">
             <span class="icon"><ion-icon name="folder-outline"></ion-icon></span>
             <span class="title">Consultas Registrados</span>
           </a></li>
 
+          <li><a href="finalizadas.html">
+            <span class="icon"><ion-icon name="checkbox-outline"></ion-icon></span>
+            <span class="title">Consultas finalizadas</span>
+          </a></li>
 
         <li><a id="link-sair">
             <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
@@ -73,49 +78,24 @@
       </div>
 
       <div class="containerElement">
-        <h1>Cadastrar dentistas</h1>
+        <h1>Cadastrar Tipo de Consulta</h1>
 
         <div class="formWrapper card">
           <form id="formCadastro" action="" method="post">
             <div class="input_group">
               <div class="input-wrap">
-                <label for="nome">Nome</label>
-                <input class="input" type="text" name="nome" id="nome" placeholder="Nome">
+                <label for="tipo_consulta">Serviço</label>
+                <input class="input" type="text" name="tipo_consulta" id="tipo_consulta" placeholder="servico ">
               </div>
 
               <div class="input-wrap">
-                <label for="Especialidade">Especialidade</label>
-                <input class="input" type="text" id="especialidade" name="especialidade" placeholder="Especialidade">
+                <label for="preco">Preço</label>
+                <input class="input" type="text" id="preco" name="preco" placeholder="0.00">
               </div>
 
               <div class="input-wrap">
-                <label for="telefone">Telefone</label>
-                <input class="input" type="text" name="telefone" id="telefone" placeholder="xxx xxx xxx">
-              </div>
-
-              <div class="input-wrap">
-                <label for="email">Email</label>
-                <input class="input" type="email" name="email" id="email" placeholder="arieldelgado@gmail.com">
-              </div>
-
-              <div class="input-wrap">
-                <label for="endereco">Endereço</label>
-                <input class="input" type="text" name="endereco" id="endereco" placeholder="ex. Patriota">
-              </div>
-
-              <div class="input-wrap">
-                <label for="nCarteira">Número da carteira</label>
-                <input class="input" type="text" name="nCarteira" id="nCarteira" placeholder="xxx xxx xxx">
-              </div>
-
-              <div class="input-wrap">
-                <label for="horaStart">horaStart</label>
-                <input class="input" type="time" name="horaStart" id="horaStart">
-              </div>
-
-              <div class="input-wrap">
-                <label for="horaEnd">horaEnd</label>
-                <input class="input" type="time" name="horaEnd" id="horaEnd">
+                <label for="desconto">Desconto</label>
+                <input class="input" type="text" name="desconto" id="desconto" placeholder="0.00">
               </div>
             </div>
 
@@ -126,20 +106,15 @@
         <div class="conainer_allEspecialista card">
           <div class="header-table">
             <h2>Dentistas</h2>
-            <input class="input" type="search" name="search" id="search" placeholder="Search...">
+            <input class="input" id="search" type="search" name="search" id="search" placeholder="Search...">
           </div>
 
           <table border="0" cellspacing="10px 0px">
             <thead>
               <tr>
-                <td>Nome</td>
-                <td>Especialidade</td>
-                <td>Telefone</td>
-                <td>Email</td>
-                <td>Endereço</td>
-                <td>NCarteira</td>
-                <td>horaStart</td>
-                <td>horaEnd</td>
+                <td>Serviço</td>
+                <td>Preço</td>
+                <td>Desconto</td>
 
                 <th>Ações</th>
               </tr>
@@ -150,12 +125,7 @@
                 <td>Nome</td>
                 <td>Especialidade</td>
                 <td>Telefone</td>
-                <td>Email</td>
-                <td>Endereço</td>
-                <td>NCarteira</td>
-                <td>horaStart</td>
-                <td>horaEnd</td>
-                <td>status</td>
+
                 <td>
                   <button><ion-icon class="color-blue" name="trash-outline"></ion-icon></button>
                   <button><ion-icon class="color-red" name="create-outline"></ion-icon></button>
@@ -185,7 +155,7 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="../../../js/cadastar_dentista.js"></script>
+    <script src="../../../js/tipo-consulta.js"></script>
 </body>
 
 </html>

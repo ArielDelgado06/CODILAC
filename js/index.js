@@ -1,4 +1,5 @@
 const buttonAccess = document.querySelector('#buttonsWrapper')
+const buttonPefil = document.querySelector("#buttonsWrapperPerfil")
 const usuarioId = localStorage.getItem('id')
 
 async function handleConsumoAPI(url) {
@@ -22,15 +23,28 @@ async function handleMovePage() {
   }
 }
 
+async function handleMovePagePerfil() {
+  const cargo = localStorage.getItem('cargo')
+  if (['admin', 'normal', 'recepcionista'].includes(cargo.toString().toLowerCase())) {
+    window.location.href = '../dashboard/admin/admin.html'
+  } else {
+    window.location.href = '../dashboard/perfil.html'
+  }
+}
+
 async function renderNomesNaTelaPaciente() {
   if (usuarioId) {
     const url = `/paciente/${usuarioId}`
     const { data: paciente } = await handleConsumoAPI(url)
 
+    buttonPefil.innerHTML = `
+      <span class="icon_button" onclick="handleMovePagePerfil()">
+        <img src="../../img/user.png" />
+      </span>
+    `
     buttonAccess.innerHTML = `
       <button class="button-access" id="buttonAccess" onclick="handleMovePage()">
-          <img class="user-icon" src="../../img/perfil-de-usuario.png" />
-          <span class="user-name" id="user-name">${paciente.nome}</span>
+          <span class="user-name" id="user-name">Agendar consulta</span>
       </button>
     `
   } else {

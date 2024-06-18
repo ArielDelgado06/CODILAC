@@ -8,13 +8,30 @@ const searchInput = document.querySelector('#search')
 const buttonNext = document.querySelector("#button-proximo")
 const buttonPrevious = document.querySelector("#button-anterior")
 
+const modal = document.getElementById("myModal");
+const span = document.getElementsByClassName("close")[0];
+
+modal.style.display = "none";
+
+span.onclick = function () {
+  modal.style.display = "none";
+}
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 async function handleMarcarComoFinalizada(id) {
   try {
     const consulta = consultaStories.find((consulta) => consulta.id === id)
 
     if (consulta.status === "FINALIZADA") {
+      modal.style.display = "block";
       return
     }
+
 
     const response = await fetch(`http://localhost:3333/consulta/${id}`, {
       method: "PATCH",
@@ -30,6 +47,7 @@ async function handleMarcarComoFinalizada(id) {
     alert('error: ' + error.mensagem)
   }
 }
+
 
 function colorir(status) {
   switch (status) {
@@ -92,6 +110,7 @@ async function getConsultaByFiltro(filtro = '', page = 0) {
     <tr>
     `
   })
+
 
   tBodyContainer.innerHTML = elements
 }

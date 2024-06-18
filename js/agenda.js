@@ -1,5 +1,7 @@
 const cardWrapper = document.querySelector('.cardWrapper')
 const modal = document.querySelector('.course-dialog')
+const span = document.getElementsByClassName("close")[0];
+
 const buttonRemarcar = document.querySelector('#remarcar')
 const selectRequest = document.querySelector('#request')
 const selectService = document.querySelector('#service')
@@ -127,8 +129,12 @@ const openModal = (id) => {
   returnAllConsult(id)
   returnAllDentista()
 }
-const closeModal = () => {
-  modal.close()
+// const closeModal = () => {
+//   modal.close()
+// }
+
+span.onclick = function() {
+  modal.style.display = "none";
 }
 
 

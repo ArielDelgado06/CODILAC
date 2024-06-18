@@ -1,7 +1,7 @@
 @import url("../CSS/dashboard.css");
 
 .information_card {
-  width: 95%;
+  width: 100%;
   height: auto;
   display: flex;
   gap: 32px;
@@ -11,7 +11,7 @@
 .informations_cards {
   position: relative;
   width: 100%;
-  padding: 8px 24px;
+  padding: 2px 24px;
 
   background-color: #fff;
   border-radius: 8px;
@@ -44,6 +44,27 @@
   font-size: 32px;
   font-weight: 300;
   color: #334155;
+}
+
+#spanLink{
+  margin-top: 1rem;
+  font-size: 18px;
+}
+
+#spanLink:hover{
+  color: var(--clr-blueliht);
+}
+
+#bConsultas{
+  list-style-type: none;
+  text-decoration: none;
+  transition: .6s;
+}
+
+#bConsultas:hover{
+  cursor: pointer;
+  transform: scale(1);
+  box-shadow: 0 1.125em 1em -1em var(--clr-blueliht);
 }
 
 .pacientesWrapper {

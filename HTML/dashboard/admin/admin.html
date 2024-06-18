@@ -10,11 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,300&display=swap"
     rel="stylesheet" />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <title>Codilac-Recepcção</title>
+  <title>Codilac-admin</title>
   <link rel="stylesheet" href="../../../CSS/admin.css">
-  <link rel="stylesheet" href="../../../CSS/recepcionista.css">
   <script src="../../../js/script.js" defer></script>
-  <!-- <script src="../../../js/admin.js" defer></script> -->
+  <script src="../../../js/redirect-adm.js" defer></script>
+  <script src="../../../js/admin.js" defer></script>
 </head>
 
 <body>
@@ -42,8 +42,7 @@
           <li>
             <a href="recepcao.html">
               <span class="icon"
-                ><ion-icon name="people-outline"></ion-icon
-              ></span>
+                ><ion-icon name="person-outline"></ion-icon></span>
               <span class="title">Cadastrar Recepcionista</span>
             </a>
           </li>
@@ -58,6 +57,10 @@
             <span class="title">Consultas Registrados</span>
           </a></li>
 
+          <li><a href="finalizadas.html">
+            <span class="icon"><ion-icon name="checkbox-outline"></ion-icon></span>
+            <span class="title">Consultas finalizadas</span>
+          </a></li>
 
         <li><a id="link-sair">
             <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
@@ -86,6 +89,7 @@
             </div>
             <span><ion-icon name="people"></ion-icon></span>
           </div>
+          
           <div id="total_agendamento" class="informations_cards">
             <div class="title_icon">
               <h3>Agenda de Hoje</h3>
@@ -100,6 +104,14 @@
             </div>
             <span><ion-icon name="time"></ion-icon></span>
           </div>
+
+          <a href="bConsultas.html" id="bConsultas" class="informations_cards">
+            <div class="title_icon">
+              <h3>Balanço de consultas</h3>
+              <span id="spanLink" class="stastic">Ver</span>
+            </div>
+            <span><ion-icon name="stats-chart-outline"></ion-icon></span>
+          </a>
         </div>
 
         <div class="pacientesWrapper card">
@@ -216,7 +228,6 @@
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <!-- <script src="../../../js/redirect-recepcionista.js"></script> -->
 </body>
 
 </html>

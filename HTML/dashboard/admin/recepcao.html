@@ -12,8 +12,7 @@
   <title>Codilac-admin</title>
   <link rel="stylesheet" href="../../../CSS/recepcao.css" />
   <script src="../../js/script.js" defer></script>
-  <script src="../../../js/utils.js"></script>
-  <script src="../../../js/recepcao.js" defer></script>
+  <script src="../../../js/cadastrar_funcionario.js" defer></script>
 </head>
 
 <body>
@@ -63,6 +62,11 @@
           </a>
         </li>
 
+        <li><a href="finalizadas.html">
+          <span class="icon"><ion-icon name="checkbox-outline"></ion-icon></span>
+          <span class="title">Consultas finalizadas</span>
+        </a></li>
+
         <li>
           <a id="link-sair">
             <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
@@ -83,7 +87,7 @@
         <h1>Cadastrar recepcionista</h1>
 
         <div class="formWrapper card">
-          <form class="form" action="" method="post" id="form">
+          <form class="form" action="" method="post">
             <div class="input-group">
               <div class="input-wrap">
                 <label for="name">Nome</label>
@@ -104,13 +108,6 @@
               <div class="input-wrap">
                 <label for="name">confirmar senha</label>
                 <input class="input" type="text" id="confSenha" placeholder="António Fula" />
-              </div>
-              <div class="input-wrap">
-                <label for="cargo">cargo</label>
-                <select name="cargo" id="cargo" class="input" >
-                  <option value="normal"> normal</option>
-                  <option value="recepcionista" selected> recepcionista </option>
-                </select>
               </div>
             </div>
             <button class="bg-waiting button">cadastrar</button>

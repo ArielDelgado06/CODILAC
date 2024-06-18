@@ -80,24 +80,13 @@ form.addEventListener('submit', async (e) => {
     const senha = senhaInput.value
     const confSenha = confSenhaInput.value
     const sexo = sexoInput.value
-    const nomevalid = nome.match(/[1-9]/g)
-    const sobreNomevalid = sobreNome.match(/[1-9]/g)
-    const nacionalidadeValid = nacionalidade.match(/[1-9]/g)
 
     if (nome == '' || nome == 'undefined' || nome == null) {
         alert('preencha o campo nome')
         return
     }
-    if(nomevalid != null){
-        window.alert('o nome não pode conter números')
-        return
-    }
     if (sobreNome == '' || sobreNome == 'undefined' || sobreNome == null) {
         alert('preencha o campo sobreNome')
-        return
-    }
-    if(sobreNomevalid != null){
-        window.alert('o sobre nome não pode conter números')
         return
     }
 
@@ -119,10 +108,6 @@ form.addEventListener('submit', async (e) => {
     }
     if (nacionalidade == '' || nacionalidade == 'undefined' || nacionalidade == null) {
         alert('preencha o campo nacionalidade')
-        return
-    }
-    if(nacionalidadeValid != null){
-        window.alert('a nacionalidade não pode conter números')
         return
     }
     if (senha == '' || senha == 'undefined' || senha == null) {
