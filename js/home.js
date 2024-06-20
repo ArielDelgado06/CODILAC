@@ -70,11 +70,11 @@ async function renderNaTelaASConsultas() {
           </span>
           <span>
             <ion-icon class="icon" name="id-card-outline"></ion-icon>
-            <p>${consulta.especialidade}</p>
+            <p>${consulta.dentista.especialidade}</p>
           </span>
           <span>
             <ion-icon class="icon" name="pricetag-outline"></ion-icon>
-            <p>${consulta.tipo_consulta.preco}</p>
+            <p>${consulta.tipo_consulta.preco}kz</p>
           </span>
           <span>
             <ion-icon class="icon" name="time-outline"></ion-icon>

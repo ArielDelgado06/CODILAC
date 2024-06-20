@@ -142,12 +142,19 @@ form.addEventListener('submit', async (e) => {
         return
     }
 
+
     if (senha.length < 8) {
         alert('a senha precisa ter no mínimo 8 caracter')
         return
     }
     if (senha != confSenha) {
         alert('senhas diferentes')
+        return
+    }
+
+    const emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
+    if (emailRegex.test(email)) {
+        alert('Email inválido!')
         return
     }
 

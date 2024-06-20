@@ -17,7 +17,7 @@ const handleRecepcionista = async (nome, email, telefeno, senha, cargo, id) => {
     "telefone": telefeno,
     "cargo": cargo,
     "senha": senha
-    
+
   }
 
   try {
@@ -68,8 +68,8 @@ form.addEventListener('submit', async (e) => {
   console.log(cargo)
   console.log(senha)
   const nomevalid = nome.match(/[1-9]/g)
- console.log(nomevalid)
-  if(nomevalid != null){
+  console.log(nomevalid)
+  if (nomevalid != null) {
     window.alert('o nome não pode conter números')
     return
   }
@@ -94,8 +94,15 @@ form.addEventListener('submit', async (e) => {
     return
   }
   if (confSenha != senha) {
-    return  window.alert('senhas diferente!')
+    return window.alert('senhas diferente!')
   }
+
+  const emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
+  if (emailRegex.test(email)) {
+    alert('Email inválido!')
+    return
+  }
+
   const id = window.localStorage.getItem('idRec')
   console.log(id)
   await handleRecepcionista(nome, email, telefeno, senha, cargo, id)
