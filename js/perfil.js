@@ -12,15 +12,17 @@ async function get_pacientes() {
   console.log(users)
 
   profile.innerHTML = `
-    <h3>Dados pessoais do usuário</h3>
+      <div class="profile_title">
+          <h3>Dados pessoais do usuário</h3>
+          <div class="iconUpdate">
+            <button><ion-icon class="color-red" name="create-outline"></ion-icon></button>
+          </div>
+        </div>
+
         <div class="profile">
           <div class="grupTitle">
             <h6>Primeiro Nome</h6>
             <p>${users.nome}</p>
-          </div>
-    
-          <div class="iconUpdate">
-            <p>Editar</p>
           </div>
         </div>
     
@@ -29,20 +31,12 @@ async function get_pacientes() {
             <h6>Segundo nome</h6>
             <p>${users.sobreNome}</p>
           </div>
-    
-          <div class="iconUpdate">
-            <p>Editar</p>
-          </div>
         </div>
     
         <div class="profile">
           <div class="grupTitle">
             <h6>Nacionalidade</h6>
             <p>${users.nacionalidade}</p>
-          </div>
-    
-          <div class="iconUpdate">
-            <p>Editar</p>
           </div>
         </div>
     
@@ -51,22 +45,14 @@ async function get_pacientes() {
             <h6>Número de telefone</h6>
             <p>${users.telefone}</p>
           </div>
-    
-          <div class="iconUpdate">
-            <p>Editar</p>
-          </div>
         </div>
       </div>
   `
   box_content.innerHTML = `
-  <div class="profile">
+        <div class="profile">
           <div class="grupTitle">
             <h6>Email</h6>
             <p>${users.email}</p>
-          </div>
-    
-          <div class="iconUpdate">
-            <p>Editar</p>
           </div>
         </div>
     
@@ -75,10 +61,6 @@ async function get_pacientes() {
             <h6>Endereço</h6>
             <p>${users.endereco}</p>
           </div>
-    
-          <div class="iconUpdate">
-            <p>Editar</p>
-          </div>
         </div>
     
         <div class="profile">
@@ -86,20 +68,12 @@ async function get_pacientes() {
             <h6>Data de nascimento</h6>
             <p>${users.data_nasc}</p>
           </div>
-    
-          <div class="iconUpdate">
-            <p>Editar</p>
-          </div>
         </div>
     
         <div class="profile">
           <div class="grupTitle">
             <h6>Sexo</h6>
             <p>${users.sexo}</p>
-          </div>
-    
-          <div class="iconUpdate">
-            <p>Editar</p>
           </div>
         </div>
   `

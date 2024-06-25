@@ -1,4 +1,4 @@
-const buttonAccess = document.querySelector('#buttonsWrapper');
+const buttonAccess = document.querySelector ('#buttonsWrapper');
 const buttonPefil = document.querySelector("#buttonsWrapperPerfil");
 const buttonLogOut = document.querySelector("#buttonsWrapperLogOut");
 const usuarioId = localStorage.getItem('id');
