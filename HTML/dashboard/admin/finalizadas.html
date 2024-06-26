@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="../../../CSS/pagamentos.css">
   <script src="../../../js/script.js" defer></script>
   <script src="../../../js/redirect-adm.js" defer></script>
+  <script src="../../../js/pagamentos.js" defer></script>
 </head>
 
 <body>
@@ -90,9 +91,10 @@
 
             <label for="status">Status do Pagamento:</label>
             <select id="status" name="status">
+              <option value="">escolhe um status</option>
               <option value="all">Todos</option>
-              <option value="paid">Pago</option>
-              <option value="unpaid">Não Pago</option>
+              <option value="pago">Pago</option>
+              <option value="não pago">Não Pago</option>
             </select>
 
             <button class="button_buscar" id="botao" type="submit">Buscar</button>
@@ -118,20 +120,7 @@
               </thead>
             </div>
             <tbody>
-              <tr class="colunas">
-                <td>01/06/2024</td>
-                <td>Maria Silva</td>
-                <td>Lavagem</td>
-                <td>200.00</td>
-                <td>Pago</td>
-              </tr>
-              <tr>
-                <td>02/06/2024</td>
-                <td>João Santos</td>
-                <td>Higiene Bucal</td>
-                <td>150.00</td>
-                <td>Pago</td>
-              </tr>
+              
 
             </tbody>
 

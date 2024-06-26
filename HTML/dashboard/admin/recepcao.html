@@ -12,7 +12,8 @@
   <title>Codilac-admin</title>
   <link rel="stylesheet" href="../../../CSS/recepcao.css" />
   <script src="../../js/script.js" defer></script>
-  <script src="../../../js/cadastrar_funcionario.js" defer></script>
+  <script src="../../../js/utils.js"></script>
+  <script src="../../../js/recepcao.js" defer></script>
 </head>
 
 <body>
@@ -87,7 +88,7 @@
         <h1>Cadastrar recepcionista</h1>
 
         <div class="formWrapper card">
-          <form class="form" action="" method="post">
+          <form class="form" action="" method="post" id="form">
             <div class="input-group">
               <div class="input-wrap">
                 <label for="name">Nome</label>
@@ -108,6 +109,13 @@
               <div class="input-wrap">
                 <label for="name">confirmar senha</label>
                 <input class="input" type="text" id="confSenha" placeholder="António Fula" />
+              </div>
+              <div class="input-wrap">
+                <label for="cargo">cargo</label>
+                <select name="cargo" id="cargo" class="input" >
+                  <option value="normal"> normal</option>
+                  <option value="recepcionista" selected> recepcionista </option>
+                </select>
               </div>
             </div>
             <button class="bg-waiting button">cadastrar</button>

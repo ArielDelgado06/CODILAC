@@ -1,12 +1,12 @@
 const cardWrapper = document.querySelector('.cardWrapper')
 const modal = document.querySelector('.course-dialog')
 const span = document.getElementsByClassName("close")[0];
-
+const modalButton = document.querySelector('.modalButton')
 const buttonRemarcar = document.querySelector('#remarcar')
-const selectRequest = document.querySelector('#request')
+const selectRequest = document.querySelector('#employee')
 const selectService = document.querySelector('#service')
 const form = document.querySelector("#myForm")
-const inputData = form.elements['calendario']
+const inputData = form.elements['date']
 function colorir(status) {
   switch (status) {
     case 'AGENDADA': return 'br-warning color-white';
@@ -105,7 +105,6 @@ const returnOneConsult = async (id) => {
     const consult = await fetch(`http://localhost:3333/consulta/${id}`).then((response) => {
       return response.json()
     })
-    console.log(consult)
     inputData.value = consult.data_consulta
     for (let i = 0; i < selectRequest.length; i++) {
       if (selectRequest.options[i].text == consult.tipo_consulta.tipo_consulta) {
@@ -113,19 +112,18 @@ const returnOneConsult = async (id) => {
       }
       if (selectService.options[i].text == consult.dentista.nome) {
         selectService.selectedIndex = i
-        return
       }
     }
 
   } catch (error) {
-    window.alert('falha ao se conectar com o servidor', error)
+    console.log('falha ao se conectar com o servidor', error)
   }
 
 }
 
 const openModal = (id) => {
   modal.showModal()
-  const oneConsult = returnOneConsult(id)
+  returnOneConsult(id)
   returnAllConsult(id)
   returnAllDentista()
 }
@@ -155,6 +153,7 @@ const returnAllConsult = async (id) => {
 
 const returnAllDentista = async () => {
   let elements = ''
+  let elementsHour = ''
   const dentista = await fetch('http://localhost:3333/dentistas/todos').then(response => {
     return response.json()
   })
@@ -162,12 +161,17 @@ const returnAllDentista = async () => {
     elements += `
      <option value ="${data.nome}">${data.nome}</option>
     `
+    elementsHour+=`
+     <option value ="${data.}">${data.nome}</option>
+    `
   })
 
   selectService.innerHTML = elements
 
 }
-
+const handleRemarcar = ()=>{
+  
+}
 renderNaTelaASConsultas()
 
 
