@@ -3,6 +3,8 @@ const especialistaWrapper = document.querySelector('.especialistaWrapper')
 const titulo = document.querySelector('#pacienteName')
 const botaoVerMais = document.querySelector('#botao-ver-mais')
 
+let consultaStories
+
 function colorir(status) {
   switch (status) {
     case 'AGENDADA': return 'br-warning color-white';
@@ -27,6 +29,20 @@ async function getDate(data) {
   return new Intl.DateTimeFormat(['ban', 'id']).format(data)
 }
 
+async function handleImprimirRecibo(consulta_id) {
+  const consulta = consultaStories.find((consulta) => consulta.id === consulta_id)
+
+  if (!consulta) {
+    alert('Consulta não encontrada!')
+  }
+
+  if (['CANCELADA', 'FINALIZADA'].includes(consulta?.status)) {
+    alert('Só se pode imprimir recibo de confirmação para consulta agendada!')
+  }
+
+  window.location.href = `http://localhost:3333/consulta/${consulta.id}/recibo`
+}
+
 async function renderNaTelaASConsultas() {
   const usuarioId = localStorage.getItem('id')
   const url = `/consulta/${usuarioId}/consultas?page=${0}&limit=${4}`
@@ -48,7 +64,7 @@ async function renderNaTelaASConsultas() {
     `
   } else {
     let elements = ''
-
+    consultaStories = consultas
     consultas?.forEach((consulta) => {
       elements += `
       <div class="agendamento-item">
@@ -59,9 +75,13 @@ async function renderNaTelaASConsultas() {
           <h4>${consulta.tipo_consulta.tipo_consulta}</h4>
         </div>
 
-        <button class="btn-print">
+        <a 
+          class="btn-print"
+          target="_blank"
+          onClick="handleImprimirRecibo(${consulta.id})" 
+        >
           <ion-icon name="download-outline"></ion-icon>
-        </button>
+        </a>
 
         <div class="infoWrapper">
           <span>

@@ -1,7 +1,7 @@
 const cardWrapper = document.querySelector('.cardWrapper')
 const modal = document.querySelector('.course-dialog')
 const span = document.getElementsByClassName("close")[0];
-
+let consultaStories
 const buttonRemarcar = document.querySelector('#remarcar')
 const selectRequest = document.querySelector('#request')
 const selectService = document.querySelector('#service')
@@ -35,6 +35,20 @@ async function handleMarcarComoFinalizada(id) {
   } catch (error) {
     alert('error: ' + error.mensagem)
   }
+}
+
+async function handleImprimirRecibo(consulta_id) {
+  const consulta = consultaStories.find((consulta) => consulta.id === consulta_id)
+
+  if (!consulta) {
+    alert('Consulta não encontrada!')
+  }
+
+  if (['CANCELADA', 'FINALIZADA'].includes(consulta?.status)) {
+    alert('Só se pode imprimir recibo de confirmação para consulta agendada!')
+  }
+
+  window.location.href = `http://localhost:3333/consulta/${consulta.id}/recibo`
 }
 
 
@@ -83,9 +97,13 @@ async function renderNaTelaASConsultas() {
                 <h4>${consulta.tipo_consulta.tipo_consulta}</h4>
               </div>
 
-               <button class="btn-print">
+              <a 
+                target="_blank"
+                class="btn-print"
+                onClick="handleImprimirRecibo(${consulta.id})"
+                >
                 <ion-icon name="download-outline"></ion-icon>
-              </button>
+              </a>
 
               <div class="infoWrapper">
                 <span>
