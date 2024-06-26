@@ -14,13 +14,31 @@
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
 }
 
-.main_perfil h3,
-.perfil_content h3 {
-  font-size: 2rem;
+.main_perfil .profile_title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.main_perfil .profile_title h3{
+  font-size: 2.3rem;
   margin-left: 1rem;
   font-weight: 500;
   color: #242323;
 }
+
+.main_perfil .profile_title 
+.iconUpdate button  {
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+
+  margin: .8rem;
+}
+
 
 .profile {
   padding: 1rem;
@@ -44,11 +62,4 @@
   font-size: 1.6rem;
   font-weight: 400;
   color: #636161;
-}
-
-.iconUpdate p {
-  cursor: pointer;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: var(--clr-blue)
 }

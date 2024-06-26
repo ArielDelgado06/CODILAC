@@ -56,7 +56,7 @@ async function renderNaTelaASConsultas() {
   const { data: consultas, status } = await handleConsumoAPI(url)
 
   if (status !== 200) {
-    agendamentoWrapper.innerHTML = `
+    cardWrapper.innerHTML = `
       <div class="mensagem-error">
         Error na aplicação
       <div>
@@ -64,7 +64,7 @@ async function renderNaTelaASConsultas() {
   }
 
   if (consultas.length === 0) {
-    agendamentoWrapper.innerHTML = `
+    cardWrapper.innerHTML = `
       <div class="mensagem-error">
         Não a nenhuma consulta
       <div>
@@ -82,7 +82,31 @@ async function renderNaTelaASConsultas() {
                 <span class="data">${consulta.data_consulta}</span>
                 <h4>${consulta.tipo_consulta.tipo_consulta}</h4>
               </div>
-              <div class="btn">
+
+               <button class="btn-print">
+                <ion-icon name="download-outline"></ion-icon>
+              </button>
+
+              <div class="infoWrapper">
+                <span>
+                  <ion-icon class="icon" name="person-outline"></ion-icon>
+                  <p>${consulta.dentista.nome}</p>
+                </span>
+                <span>
+                  <ion-icon class="icon" name="id-card-outline"></ion-icon>
+                  <p>${consulta.dentista.especialidade}</p>
+                </span>
+                <span>
+                  <ion-icon class="icon" name="pricetag-outline"></ion-icon>
+                  <p>${consulta.tipo_consulta.preco}kz</p>
+                </span>
+                <span>
+                  <ion-icon class="icon" name="time-outline"></ion-icon>
+                  <p>${consulta.hora_consulta}</p>
+                </span>
+              </div>
+
+              <div class="btn | btn-card">
                 <button class="button-ghost" onclick="openModal(${consulta.id})" id="remarcar">Remarcar</button>
                 <button class="button-ghost ${consulta.status !== 'CANCELADA' ? 'bg-error' : 'bg-disable'} color-white" onclick="handleMarcarComoFinalizada(${consulta.id})">cancela</button>
               </div>
@@ -131,7 +155,7 @@ const openModal = (id) => {
 //   modal.close()
 // }
 
-span.onclick = function() {
+span.onclick = function () {
   modal.style.display = "none";
 }
 

@@ -264,6 +264,12 @@ form.addEventListener('submit', async (e) => {
     return
   }
 
+  const emailRegex = /^[a-z]{4}[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
+  if (emailRegex.test(email)) {
+    alert('Email inválido!')
+    return
+  }
+
   await handleCadastroEAtualizar(
     nome,
     especialidade,

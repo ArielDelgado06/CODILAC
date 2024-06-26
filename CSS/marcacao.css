@@ -28,11 +28,11 @@
 /* estilo do card de agendamentos */
 
 .cardWrapper .agendamento-item {
-  width: 32rem;
-  height: 14rem;
+  width: 42rem;
   background: #fff;
 
   display: flex;
+  position: relative;
 
   border: 1px solid #fff;
   border-left: 0;
@@ -69,18 +69,69 @@
   font-weight: 600;
 }
 
-.button-ghost{
-  background:hsl(216, 100%, 50%);
+.btn-print {
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
+
+  border: none;
+  outline: none;
+  background: none;
+  padding: 4px 6px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all .5s;
+}
+
+.btn-print:hover {
+  opacity: 0.5;
+}
+
+.btn-card {
+  align-self: flex-end;
+}
+
+.agendamento-item .content h4 {
+  color: #334155;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.agendamento-item .content>.infoWrapper {
+
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
+
+.agendamento-item .content .infoWrapper>span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 4px;
+  border: #E2E8F0 1px solid;
+  padding: 4px;
+}
+
+.agendamento-item .content .infoWrapper span>.icon {
+  font-size: 14px;
+}
+
+
+.button-ghost {
+  background: hsl(216, 100%, 50%);
   color: #fff;
   border-radius: 4px;
 }
 
-.button-ghost:hover{
-  background:#60A5FA;
+.button-ghost:hover {
+  background: #60A5FA;
 }
 
 @media (min-width:300px) and (max-width:767px) {
-  .main_box{
+  .main_box {
     width: 100%;
     height: auto;
     margin-left: 0;
@@ -88,11 +139,11 @@
     flex-direction: column;
   }
 
-  .main_box h2{
+  .main_box h2 {
     margin-left: 3rem;
   }
 
-  .main_box .cardWrapper{
+  .main_box .cardWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -106,10 +157,10 @@
 
 }
 
-@media (max-width:320px){
-  .cardWrapper .agendamento-item .btn .button-ghost{
+@media (max-width:320px) {
+  .cardWrapper .agendamento-item .btn .button-ghost {
     width: auto;
     gap: 2px;
     padding: 2px 5px;
-}
+  }
 }

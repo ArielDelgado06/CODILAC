@@ -56,6 +56,12 @@ form.addEventListener('submit', async (event) => {
     return
   }
 
+  const emailRegex = /^[a-z][a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
+  if (emailRegex.test(email)) {
+    alert('Email inválido!')
+    return
+  }
+
   if (email && senha) {
     const usuario = await handleLogin(email, senha)
     console.log(usuario)
