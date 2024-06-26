@@ -119,8 +119,21 @@ async function getDentistasByFiltro(filtro = '', page = 0) {
   const tipo_consulta = await response.json()
   totalConsultas = tipo_consulta.length
 
-  console.log(tipo_consulta)
   if (response.status !== 200) {
+    tBodyContainer.innerHTML = `
+     <tr>
+        <td colspan="5" class="mensagem-error">Ocorreu um erro interno.</td>
+      <tr>
+    `
+    return
+  }
+
+  if (tipo_consulta.length === 0) {
+    tBodyContainer.innerHTML = `
+     <tr>
+        <td colspan="5" class="mensagem-error">Nenhum serviço cadastrado.</td>
+      <tr>
+    `
     return
   }
 

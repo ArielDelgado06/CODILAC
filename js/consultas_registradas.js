@@ -75,10 +75,23 @@ async function getConsultaByFiltro(filtro = '', page = 0) {
   const consultas = await response.json()
 
   if (response.status !== 200) {
+    tBodyContainer.innerHTML = `
+      <tr>
+        <td colspan="6" class="mensagem-error">Ocorreu um erro interno.</td>
+      <tr>
+   `
     return
   }
 
-  console.log('dfada')
+  if (consultas.length === 0) {
+    tBodyContainer.innerHTML = `
+      <tr>
+        <td colspan="6" class="mensagem-error">Nenhuma consulta finalizada.</td>
+      <tr>
+   `
+    return
+  }
+
   totalConsultas = consultas.length
   consultaStories = consultas
 

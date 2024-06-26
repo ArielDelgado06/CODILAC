@@ -1,4 +1,4 @@
-const buttonAccess = document.querySelector ('#buttonsWrapper');
+const buttonAccess = document.querySelector('#buttonsWrapper');
 const buttonPefil = document.querySelector("#buttonsWrapperPerfil");
 const buttonLogOut = document.querySelector("#buttonsWrapperLogOut");
 const usuarioId = localStorage.getItem('id');
@@ -8,7 +8,7 @@ async function handleConsumoAPI(url) {
 
   const data = await response.json()
   const status = await response.status
-  console.log(status)
+
   return {
     data,
     status
@@ -51,7 +51,7 @@ async function renderNomesNaTelaPaciente() {
     `
     buttonAccess.innerHTML = `
       <button class="button-access" id="buttonAccess" onclick="handleMovePage()">
-          <span class="user-name" id="user-name">Agendar consulta</span>
+          <span class="user-name" id="user-name">${paciente.nome}</span>
       </button>
     `
     buttonLogOut.innerHTML = `

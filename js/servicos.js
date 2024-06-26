@@ -27,6 +27,20 @@ async function getDentistasByFiltro(filtro = '', page = 0) {
 
   console.log(tipo_consulta)
   if (response.status !== 200) {
+    tBodyContainer.innerHTML = `
+     <tr>
+        <td colspan="5" class="mensagem-error">Ocorreu um erro interno.</td>
+      <tr>
+    `
+    return
+  }
+
+  if (tipo_consulta.length === 0) {
+    tBodyContainer.innerHTML = `
+     <tr>
+        <td colspan="5" class="mensagem-error">Ocorreu um erro interno.</td>
+      <tr>
+    `
     return
   }
 

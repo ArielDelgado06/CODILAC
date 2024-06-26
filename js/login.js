@@ -30,7 +30,11 @@ async function handleLogin(email, senha) {
 
     localStorage.setItem('id', data?.id)
     localStorage.setItem('cargo', data?.cargo)
-    window.location.href = './index.html'
+    if (['admin', 'recepcionista'].includes(data?.cargo)) {
+      window.location.href = '../dashboard/admin/admin.html'
+    } else {
+      window.location.href = './index.html'
+    }
 
   } catch (error) {
     console.log(error)

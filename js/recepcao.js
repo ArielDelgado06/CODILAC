@@ -121,7 +121,13 @@ const handleRecepcionistaRetorn = async () => {
 
     const recepcionistas = await response.json()
 
-
+    if (recepcionistas.length === 0) {
+      tBodyContainer.innerHTML = `
+          <tr>
+            <td colspan="4" class="mensagem-error">Não existe nenhum recepcionista cadastrado</td>
+          <tr>
+        `
+    }
 
     recepcionistas.forEach((recepcionista) => {
       elements += `

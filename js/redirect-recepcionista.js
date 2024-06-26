@@ -6,11 +6,11 @@ const link = document.getElementById("link-sair");
     const id = localStorage.getItem('id')
     const cargo = localStorage.getItem('cargo')
     if (!id || id === '') {
-      window.location.href = "../../site/index.html"
+      window.location.href = "../../site/login.html"
     }
 
     if (['recepcionista', 'admin'].includes(cargo.toLowerCase())) {
-      window.location.href = "../../site/index.html"
+      window.location.href = "../../site/login.html"
     }
   }, 500)
 })()
@@ -19,7 +19,6 @@ const link = document.getElementById("link-sair");
 function logout() {
   localStorage.removeItem('id')
   localStorage.removeItem('cargo')
-  window.location.replace('../site/login.html')
 }
 
 link.addEventListener('click', () => {
