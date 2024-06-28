@@ -51,7 +51,7 @@ async function renderNomesNaTelaPaciente() {
     `
     buttonAccess.innerHTML = `
       <button class="button-access" id="buttonAccess" onclick="handleMovePage()">
-          <span class="user-name" id="user-name">${paciente.nome}</span>
+          <span class="user-name" id="user-name">Agendar consulta</span>
       </button>
     `
     buttonLogOut.innerHTML = `

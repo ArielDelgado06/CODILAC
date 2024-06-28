@@ -1,6 +1,26 @@
 const profile = document.querySelector('.main_perfil');
 const box_content = document.querySelector('.perfil_content');
 
+const modal = document.getElementById("myModalPerfil");
+const span = document.getElementsByClassName ("close")[0];
+const getIdButton = document.querySelector("#edit_button");
+
+modal.style.display = "none";
+
+function mostreModal(){
+  modal.style.display = "block";
+}
+
+span.onclick = function () {
+  modal.style.display = "none";
+}
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 async function get_pacientes() {
   const usuarioId = localStorage.getItem('id')
   const res = await fetch(`http://localhost:3333/paciente/${usuarioId}`, {
@@ -15,7 +35,7 @@ async function get_pacientes() {
       <div class="profile_title">
           <h3>Dados pessoais do usuário</h3>
           <div class="iconUpdate">
-            <button><ion-icon class="color-red" name="create-outline"></ion-icon></button>
+            <button id="edit_button" onclick="mostreModal()"><ion-icon class="color-red" name="create-outline"></ion-icon></button>
           </div>
         </div>
 
