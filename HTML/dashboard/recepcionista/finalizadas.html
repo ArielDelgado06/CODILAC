@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,300&display=swap"
+    rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Codilac-Consultas Finalizadas</title>
+  <link rel="stylesheet" href="../../../CSS/pagamentos.css">
+  <script src="../../../js/script.js" defer></script>
+  <!-- <script src="../../../js/redirect-adm.js" defer></script> -->
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="navigation">
+      <ul>
+        <li><a href="#">
+            <span class="logotipo">
+              <img src="../../../img/logotipo.png" alt="">
+            </span>
+          </a></li>
+
+
+        <li><a href="recepcionista.html">
+            <span class="icon"><ion-icon name="apps-outline"></ion-icon></span>
+            <span class="title">Painel de controle</span>
+          </a></li>
+
+        <li><a href="consultas.html">
+            <span class="icon"><ion-icon name="folder-outline"></ion-icon></span>
+            <span class="title">Consultas Registrados</span>
+          </a></li>
+
+          <li><a href="finalizadas.html">
+            <span class="icon"><ion-icon name="checkbox-outline"></ion-icon></span>
+            <span class="title">Consultas finalizadas</span>
+          </a></li>
+
+        <li><a id="link-sair">
+            <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+            <span class="title">Sair</span>
+          </a></li>
+      </ul>
+    </div>
+
+    <div class="main">
+
+
+      <div class="topbar">
+        <div class="toggle">
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
+      </div>
+
+      <div class="containerElement">
+        <h1>Consultas Finalizadas</h1>
+
+        <section class="filter-section">
+          <h2>Filtrar Consulta</h2>
+          <form id="filter-form">
+            <label for="date">Data:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="patient">Paciente:</label>
+            <input type="text" id="patient" name="patient" placeholder="Nome do paciente">
+
+            <label for="status">Status do Pagamento:</label>
+            <select id="status" name="status">
+              <option value="all">Todos</option>
+              <option value="paid">Pago</option>
+              <option value="unpaid">Não Pago</option>
+            </select>
+
+            <button class="button_buscar" id="botao" type="submit">Buscar</button>
+          </form>
+        </section>
+
+
+        <div class="pacientesWrapper card">
+          <div class="header-table">
+            <h2>Consultas Finalizadas</h2>
+          </div>
+
+          <table border="0" cellspacing="10px 0px">
+            <div>
+              <thead class="header">
+                <tr class="colunas">
+                  <th>Data</th>
+                  <th>Pacienta</th>
+                  <th>Serviços</th>
+                  <th>Valor(kz)</th>
+                  <th>status</th>
+                </tr>
+              </thead>
+            </div>
+            <tbody>
+              <tr class="colunas">
+                <td>01/06/2024</td>
+                <td>Maria Silva</td>
+                <td>Lavagem</td>
+                <td>200.00</td>
+                <td>Pago</td>
+              </tr>
+              <tr>
+                <td>02/06/2024</td>
+                <td>João Santos</td>
+                <td>Higiene Bucal</td>
+                <td>150.00</td>
+                <td>Pago</td>
+              </tr>
+
+            </tbody>
+
+            <tfoot>
+              <tr class="tfoot_td">
+
+                <td colspan="5">
+                  <button type="button" id="button-proximo" class="button-arrow"><ion-icon
+                      name="chevron-back-outline"></ion-icon></button>
+                  <button type="button" id="button-anterior" class="button-arrow"><ion-icon
+                      name="chevron-forward-outline"></ion-icon></button>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
