@@ -2,12 +2,14 @@ let dentistaId
 let search = ''
 let page = 0
 let totalConsultas
+let consultaStory
 
 const tBodyContainer = document.querySelector("tbody")
 const searchInput = document.querySelector('#search')
 const totalPacientes = document.querySelector('#totalPacientes')
 const pacientesAgendados = document.querySelector('#pacientesAgendados')
 const agendaHoje = document.querySelector('#agendaHoje')
+const balancodeConsultas = document.querySelector('#balancodeConsultas')
 
 const buttonNext = document.querySelector("#button-proximo")
 const buttonPrevious = document.querySelector("#button-anterior")
@@ -20,14 +22,23 @@ async function getDentistasByFiltro(filtro = '', page = 0) {
   })
 
   const consultas = await response.json()
-  console.log(consultas)
   totalConsultas = consultas.length
 
   if (response.status !== 200) {
+    tBodyContainer.innerHTML = `
+     <tr>
+        <td colspan="5" class="mensagem-error">Não a nenhuma consulta agenda</td>
+      <tr>
+    `
     return
   }
 
   if (consultas.length === 0) {
+    tBodyContainer.innerHTML = `
+      <tr>
+        <td colspan="5" class="mensagem-error">Não a nenhuma consulta agenda</td>
+      <tr>
+    `
     return
   }
 
@@ -50,7 +61,6 @@ async function getDentistasByFiltro(filtro = '', page = 0) {
   })
 
   tBodyContainer.innerHTML = elements
-
 }
 
 async function getPacienteAll() {
@@ -61,31 +71,43 @@ async function getPacienteAll() {
   })
 
   const consultas = await response.json()
-  console.log(consultas)
   totalPacientes.innerHTML = consultas.length
 }
 
 async function getConsultas() {
-  const data = new Intl.DateTimeFormat(['ban', 'id']).format(new Date())
-  const response = await fetch(`http://localhost:3333/consulta/consultas?filtro=${data}&page=${0}&limit=${30}`, {
+  const response = await fetch(`http://localhost:3333/consulta/consultas?filtro=${new Date().toISOString()}&page=${0}&limit=${30}`, {
     method: "GET",
     headers: { "Content-Type": "application/json;charset=UTF-8" }
   })
 
   const consultas = await response.json()
-  console.log(consultas)
   agendaHoje.innerHTML = consultas.length
 }
 
-async function getConsultasPacientesAgendados() {
-  const data = new Intl.DateTimeFormat(['ban', 'id']).format(new Date())
-  const response = await fetch(`http://localhost:3333/consulta/consultas?filtro=${data}&page=${0}&limit=${30}`, {
+async function getBalancoDeHoje() {
+  const response = await fetch(`http://localhost:3333/consulta/consultas?filtro=${new Date().toISOString()}&page=${0}&limit=${30}`, {
     method: "GET",
     headers: { "Content-Type": "application/json;charset=UTF-8" }
   })
 
   const consultas = await response.json()
-  console.log(consultas)
+
+  if (consultas.length !== 0) {
+    const consultasFeitasHoje = consultas.filter((consulta) => consulta.status === 'FINALIZADA')
+    balancodeConsultas.innerHTML = consultasFeitasHoje.length
+    return
+  }
+
+  balancodeConsultas.innerHTML = consultas.length
+}
+
+async function getConsultasPacientesAgendados() {
+  const response = await fetch(`http://localhost:3333/consulta/consultas?filtro=${new Date().toISOString()}&page=${0}&limit=${30}`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json;charset=UTF-8" }
+  })
+
+  const consultas = await response.json()
   pacientesAgendados.innerHTML = consultas.length
 }
 
@@ -94,6 +116,10 @@ getDentistasByFiltro()
 getPacienteAll()
 
 getConsultas()
+
+getBalancoDeHoje()
+
+getConsultasPacientesAgendados()
 
 buttonPrevious.addEventListener('click', event => {
   if (page <= 0) {

@@ -1,6 +1,7 @@
 const cardWrapper = document.querySelector('.cardWrapper')
 const modal = document.querySelector('.course-dialog')
 const span = document.getElementsByClassName("close")[0];
+let consultaStories
 const modalButton = document.querySelector('.modalButton')
 const buttonRemarcar = document.querySelector('#remarcar')
 const selectRequest = document.querySelector('#employee')
@@ -36,6 +37,20 @@ async function handleMarcarComoFinalizada(id) {
   } catch (error) {
     alert('error: ' + error.mensagem)
   }
+}
+
+async function handleImprimirRecibo(consulta_id) {
+  const consulta = consultaStories.find((consulta) => consulta.id === consulta_id)
+
+  if (!consulta) {
+    alert('Consulta não encontrada!')
+  }
+
+  if (['CANCELADA', 'FINALIZADA'].includes(consulta?.status)) {
+    alert('Só se pode imprimir recibo de confirmação para consulta agendada!')
+  }
+
+  window.location.href = `http://localhost:3333/consulta/${consulta.id}/recibo`
 }
 
 
@@ -83,9 +98,13 @@ async function renderNaTelaASConsultas() {
                 <h4>${consulta.tipo_consulta.tipo_consulta}</h4>
               </div>
 
-               <button class="btn-print">
+              <a 
+                target="_blank"
+                class="btn-print"
+                onClick="handleImprimirRecibo(${consulta.id})"
+                >
                 <ion-icon name="download-outline"></ion-icon>
-              </button>
+              </a>
 
               <div class="infoWrapper">
                 <span>
@@ -132,6 +151,8 @@ const returnOneConsult = async (id) => {
     const consult = await fetch(`http://localhost:3333/consulta/${id}`).then((response) => {
       return response.json()
     })
+
+    console.log(consult.hora_consulta)
     inputData.value = consult.data_consulta
     for (let i = 0; i < selectRequest.length; i++) {
       if (selectRequest.options.item(i).text == consult.tipo_consulta.tipo_consulta) {
@@ -226,13 +247,12 @@ const handleUpdateConsulta = async()=>{
   const idTipo = window.localStorage.getItem('tipo_consultaId')
    try{
     const newConsulta = {
-      id:idConsult,
       data_consulta:inputData.value,
       hora_consulta:selectHour.value,
       dentistaId:id,
       tipo_consultaId:idTipo,
     }
-    await fetch(`http://localhost:3333/actualizar/consulta`,{
+    await fetch(`http://localhost:3333/actualizar/consulta${idConsult}`,{
       method:'PUT',
       body:JSON.stringify(newConsulta),
       headers:{'Content-Type':'application/json'}
