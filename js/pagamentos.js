@@ -130,7 +130,7 @@ const handlePagamentoByData = async(data)=>{
 }
 let estado = true
 
-form.addEventListener('submit',async(e)=>{
+select.addEventListener('change',async(e)=>{
   
     e.preventDefault()
     const filter =select.value
@@ -149,11 +149,25 @@ form.addEventListener('submit',async(e)=>{
 
 })
 
-const pacienteInput = inputPacient.onfocus()
+inputPacient.addEventListener('change',(e)=>{
+    e.preventDefault()
 
-if(pacienteInput == true){
-    console.log('campo selecionado')
-}
+    e.preventDefault()
+    const filter =inputPacient.value
+    
+    handlePagamento(filter)
+    estado = ! estado
+
+    if(inputPacient.value != ''){
+        handlePagamentoByNome(inputPacient.value)
+        return
+    }
+    if(inputData.value !=''){
+        handlePagamentoByData(inputData.value)
+        return
+    }
+
+})
 
 if(estado){
     handlePagamento(100)
